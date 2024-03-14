@@ -1,0 +1,14 @@
+{
+  "description": "ÖBB Personenverkehr",
+  "locations": [
+    {
+      "location": "1020 Wien, Lassallestraße 5"
+    },
+    {
+      "location": "1100 Wien, Am Hauptbahnhof 1",
+      "isPrimaryLocation": true
+    }
+  ],
+  "size": 95,
+  "name": "ÖBB Personenverkehr"
+}

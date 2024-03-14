@@ -1,0 +1,13 @@
+{
+  "locations": [
+    {
+      "location": "1230 Wien, Deutschstraße 10"
+    },
+    {
+      "location": "2345 Brunn am Gebirge, TÜV-AUSTRIA-Platz 1",
+      "isPrimaryLocation": true
+    }
+  ],
+  "size": 25,
+  "description": "TÜV AUSTRIA GMBH"
+}

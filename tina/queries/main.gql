@@ -1,0 +1,15 @@
+mutation createFile($relativePath: String!, $params: DocumentMutation!) {
+  createDocument(
+    collection: "file"
+    relativePath: $relativePath
+    params: $params
+  ) {
+    __typename
+  }
+}
+
+mutation deleteFile($relativePath: String!) {
+  deleteDocument(collection: "file", relativePath: $relativePath) {
+    __typename
+  }
+}

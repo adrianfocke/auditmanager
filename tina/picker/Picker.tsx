@@ -5,7 +5,7 @@ import { Card, Text } from '@radix-ui/themes';
 import { uniqueUuid } from 'docx';
 import React, { useEffect } from 'react';
 import { wrapFieldsWithMeta } from 'tinacms';
-import { queryMapper } from './queries';
+import client from '../../tina/__generated__/client';
 
 export default (type: PickerType) =>
   wrapFieldsWithMeta((props) => {
@@ -15,10 +15,27 @@ export default (type: PickerType) =>
     useEffect(() => {
       const fetchValues = async () => {
         try {
-          const fetched = await queryMapper[type]();
-          setValues(fetched);
+          const result = await client.queries.personConnection();
+
+          if (!result.data.personConnection.edges) {
+            console.log('No auditors found!');
+            return undefined;
+          }
+
+          console.log('All auditors found!');
+
+          const values = result.data.personConnection.edges
+            ?.map((person) => {
+              if (person?.node?.isAuditor) {
+                return `${person?.node?.firstName} ${person?.node?.lastName}`;
+              }
+            })
+            .filter((person) => person) as string[];
+
+          setValues(values);
         } catch (error) {
-          console.error('Error fetching:', error);
+          console.error('All auditors not fetched: ', error);
+          return undefined;
         }
       };
 

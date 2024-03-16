@@ -14,7 +14,9 @@ export default (type: PickerType) =>
 
     useEffect(() => {
       console.log('Props for picker: ', props);
-      queryMapper[type]().then((values) => values && setValues(values));
+      Promise.resolve(queryMapper[type]()).then(
+        (values) => values && setValues(values)
+      );
     }, [props]);
 
     if (!values) {

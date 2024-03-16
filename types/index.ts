@@ -56,3 +56,5 @@ export type View = {
 
 
 export type Time = `${number}:${number}`;
+
+export type PickerType = 'All Auditors';

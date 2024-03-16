@@ -13,10 +13,18 @@ export default (type: PickerType) =>
     console.log('Values for picker: ', values);
 
     useEffect(() => {
-      console.log('Props for picker: ', props);
-      Promise.resolve(queryMapper[type]()).then(
-        (values) => values && setValues(values)
-      );
+      const fetchValues = async () => {
+        try {
+          const fetched = await queryMapper[type]();
+          setValues(fetched);
+        } catch (error) {
+          console.error('Error fetching:', error);
+        }
+      };
+
+      if (props) {
+        fetchValues();
+      }
     }, [props]);
 
     if (!values) {

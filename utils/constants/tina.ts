@@ -58,7 +58,6 @@ export const LOCATIONS = [
 ];
 
 export const PARTNERS = ['Gerald Färber', 'Johnny Partnerman'];
-export const AUDITORS = ['Christian Focke-Kiss', 'Adrian Focke'];
 
 export const TIMES = [
   '06:30',

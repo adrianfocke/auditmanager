@@ -1,6 +1,6 @@
 import { Collection } from 'tinacms';
+import Picker from '../../../tina/picker/Picker';
 import {
-  AUDITORS,
   AUDIT_TYPES,
   AUDIT_TYPE_RELATIONS,
   CONTEXTS,
@@ -160,10 +160,12 @@ export default {
             },
             {
               name: 'auditors',
-              label: 'Auditors',
               type: 'string',
               list: true,
-              options: AUDITORS,
+              label: ' ' /* will be added later, based on picker type */,
+              ui: {
+                component: Picker('All Auditors'),
+              },
             },
             {
               name: 'room',

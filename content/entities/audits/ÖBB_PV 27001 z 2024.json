@@ -46,13 +46,8 @@
             "ISO-27001-ABC4.1 – Anderer (unwichtiger) Unterpunkt"
           ],
           "duration": "00:30",
-          "partners": [
-            "Gerald Färber"
-          ],
-          "auditors": [
-            "Christian Focke-Kiss",
-            "Adrian Focke"
-          ]
+          "partners": ["Johnny Partnerman", "Gerald Färber"],
+          "auditors": ["Adrianus Bertus", "Christian Focke-Kiss"]
         },
         {
           "reusableContext": "Strategic planning",

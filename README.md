@@ -6,12 +6,6 @@ For more info, check the detailed section.
 
 ## Get Started
 
-Create a .env file and add required environment variables:
-
-```
-TINA_URL="http://localhost:4001/graphql"
-```
-
 Inside the project folder open a terminal and execute the following code to install it's dependencies and run the dev server:
 
 ```

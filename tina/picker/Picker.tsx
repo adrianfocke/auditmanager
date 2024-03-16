@@ -10,8 +10,10 @@ import { queryMapper } from './queries';
 export default (type: PickerType) =>
   wrapFieldsWithMeta((props) => {
     const [values, setValues] = React.useState<string[] | undefined>(undefined);
+    console.log('Values for picker: ', values);
 
     useEffect(() => {
+      console.log('Props for picker: ', props);
       queryMapper[type]().then((values) => values && setValues(values));
     }, [props]);
 

@@ -1,5 +1,4 @@
 import { Collection } from 'tinacms';
-import Picker from '../../../tina/picker/Picker';
 import {
   AUDIT_TYPES,
   AUDIT_TYPE_RELATIONS,
@@ -14,6 +13,7 @@ import {
   readableDateFromDatetime,
   readableFileNameFromEntity,
 } from '../../../utils/readables';
+import Picker from '../../picker/Picker';
 
 export default {
   name: 'audit',

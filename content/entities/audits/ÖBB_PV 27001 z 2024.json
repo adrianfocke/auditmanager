@@ -110,9 +110,6 @@
   ],
   "auditors": [
     {
-      "person": "content/entities/people/FAG.json"
-    },
-    {
       "isLead": true,
       "person": "content/entities/people/FOC.json"
     }

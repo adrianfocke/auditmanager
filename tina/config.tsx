@@ -5,6 +5,9 @@ import files from './collections/files';
 import people from './collections/people';
 import standards from './collections/standards';
 
+import React from 'react';
+const keep = React.Fragment;
+
 export default defineConfig({
   clientId: process.env.NEXT_PUBLIC_TINA_CLIENT_ID ?? '',
   token: process.env.TINA_TOKEN ?? '',

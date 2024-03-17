@@ -8,7 +8,7 @@ import standards from './collections/standards';
 export default defineConfig({
   clientId: process.env.NEXT_PUBLIC_TINA_CLIENT_ID ?? '',
   token: process.env.TINA_TOKEN ?? '',
-  branch: process.env.NEXT_PUBLIC_VERCEL_GIT_COMMIT_REF ?? '',
+  branch: process.env.NEXT_PUBLIC_VERCEL_GIT_COMMIT_REF ?? 'picker',
   media: {
     tina: {
       publicFolder: 'public',

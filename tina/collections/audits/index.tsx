@@ -15,6 +15,9 @@ import {
 } from '../../../utils/readables';
 import Picker from '../../picker/Picker';
 
+import React from 'react';
+const keep = React.Fragment;
+
 export default {
   name: 'audit',
   label: 'Audit',

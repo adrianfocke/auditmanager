@@ -1,7 +1,10 @@
+import client from '@/tina/__generated__/client';
 import type { PickerType } from '@/types/index';
-import client from '../../tina/__generated__/client';
 
 export const allAuditors = async () => {
+  const tinaClient = client;
+  console.log('Tina client: ', tinaClient);
+
   console.log('Make all auditors query!');
   try {
     const result = await client.queries.personConnection();

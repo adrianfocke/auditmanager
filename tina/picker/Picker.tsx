@@ -5,10 +5,10 @@ import { Card, Text } from '@radix-ui/themes';
 import { uniqueUuid } from 'docx';
 import React, { useEffect } from 'react';
 import { wrapFieldsWithMeta } from 'tinacms';
-import client from '../__generated__/client';
+import type { TinaClient } from 'tinacms/dist/client';
 import { queryMapper } from './queries';
 
-export default (type: PickerType) =>
+export default (client: TinaClient<any>, type: PickerType) =>
   wrapFieldsWithMeta((props) => {
     const [values, setValues] = React.useState<string[] | undefined>(undefined);
     console.log('Values for picker: ', values);

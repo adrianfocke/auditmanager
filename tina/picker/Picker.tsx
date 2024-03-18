@@ -5,6 +5,7 @@ import { Card, Text } from '@radix-ui/themes';
 import { uniqueUuid } from 'docx';
 import React, { useEffect } from 'react';
 import { wrapFieldsWithMeta } from 'tinacms';
+import getClient from '../../app/actions/getClient';
 import client from '../__generated__/client';
 import { queryMapper } from './queries';
 
@@ -16,6 +17,8 @@ export default (type: PickerType) =>
     console.log('Tina client in Picker: ', client);
 
     useEffect(() => {
+      console.log('Client in useEffect: ', getClient());
+
       console.log('Props for picker: ', props);
       Promise.resolve(queryMapper[type]()).then(
         (values) => values && setValues(values)

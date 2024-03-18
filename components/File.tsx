@@ -1,5 +1,6 @@
 'use client';
 import patchDocument from '@/app/actions/patchDocument';
+import client from '@/tina/__generated__/client';
 import type { Placeholders, Skeleton } from '@/types/index';
 import { uniqueUuid } from 'docx';
 import { useEffect, useState } from 'react';
@@ -24,6 +25,8 @@ export default ({ placeholders, result }: FileProps) => {
   const { data } = useTina(result);
   const [patchedDocument, setPatchedDocument] = useState<string | undefined>();
   const givenEntity = entityMapper(data.file.entity?.__typename!);
+
+  console.log('Client in files:', client);
 
   useEffect(
     () => {

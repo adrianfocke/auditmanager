@@ -3,8 +3,9 @@ import * as Checkbox from '@radix-ui/react-checkbox';
 import { CheckIcon } from '@radix-ui/react-icons';
 import { Card, Text } from '@radix-ui/themes';
 import { uniqueUuid } from 'docx';
-import React, { useEffect } from 'react';
+import React, { useContext, useEffect } from 'react';
 import { wrapFieldsWithMeta } from 'tinacms';
+import { TinaClientContext } from '../../app/layout';
 import client from '../__generated__/client';
 import { queryMapper } from './queries';
 
@@ -14,6 +15,9 @@ export default (type: PickerType) =>
     console.log('Values for picker: ', values);
 
     console.log('Tina client in Picker: ', client);
+
+    const tinaClient = useContext(TinaClientContext);
+    console.log('Context client: ', tinaClient);
 
     useEffect(() => {
       console.log('Props for picker: ', props);

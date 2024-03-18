@@ -22,8 +22,6 @@ export default async function Page({ params }: Params) {
   const { skeleton } = result.data.file;
   const placeholders = await extractPlaceholders(skeleton as Skeleton);
 
-  console.info('Client in server component: ', client);
-
   return (
     <Suspense fallback={<Text>Loading...</Text>}>
       <File placeholders={placeholders} result={result} />

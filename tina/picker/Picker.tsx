@@ -8,8 +8,11 @@ import { wrapFieldsWithMeta } from 'tinacms';
 import client from '../__generated__/client';
 import { queryMapper } from './queries';
 
-export default (type: PickerType) =>
-  wrapFieldsWithMeta((props) => {
+export default (type: PickerType) => {
+  const tinaClient = client;
+  console.log('Tina client: ', tinaClient);
+
+  return wrapFieldsWithMeta((props) => {
     const [values, setValues] = React.useState<string[] | undefined>(undefined);
     console.log('Values for picker: ', values);
 
@@ -60,3 +63,7 @@ export default (type: PickerType) =>
       </div>
     );
   });
+};
+
+
+

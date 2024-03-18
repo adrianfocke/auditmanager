@@ -1,5 +1,4 @@
 import { Collection } from 'tinacms';
-import client from '../../../tina/__generated__/client';
 import {
   AUDIT_TYPES,
   AUDIT_TYPE_RELATIONS,
@@ -165,7 +164,7 @@ export default {
               list: true,
               label: ' ' /* will be added later, based on picker type */,
               ui: {
-                component: Picker(client, 'All Auditors'),
+                component: Picker('All Auditors'),
               },
             },
             {

@@ -57,4 +57,8 @@ export type View = {
 
 export type Time = `${number}:${number}`;
 
-export type PickerQueryType = 'All Auditors';
+export type GQLQueryType = 'All Auditors';
+export interface GQLQueryInfo {
+  query: string;
+  display: (data: any) => string | string[] | null;
+};

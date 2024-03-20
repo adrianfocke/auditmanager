@@ -5,14 +5,14 @@ import { Card, Text } from '@radix-ui/themes';
 import { uniqueUuid } from 'docx';
 import React, { useEffect } from 'react';
 import { wrapFieldsWithMeta } from 'tinacms';
-import { queryMapper } from './queryMapper';
+import fetchAllAuditors from '../../app/actions/graphql/fetchAllAuditors';
 
 export default (queryType: PickerQueryType) =>
   wrapFieldsWithMeta((props) => {
     const [values, setValues] = React.useState<string[] | undefined>(undefined);
 
     useEffect(() => {
-      Promise.resolve(queryMapper[queryType]()).then(
+      Promise.resolve(fetchAllAuditors()).then(
         (values) => values && setValues(values)
       );
     }, [props]);

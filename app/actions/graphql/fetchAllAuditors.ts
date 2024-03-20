@@ -1,8 +1,9 @@
 import type { PersonConnectionQuery } from '@/tina/__generated__/types';
+import { env } from '../../../env';
 
 export default async () => {
   const myHeaders = new Headers();
-  myHeaders.append('X-API-KEY', process.env.NEXT_PUBLIC_TINA_TOKEN!);
+  myHeaders.append('X-API-KEY', env.NEXT_PUBLIC_TINA_TOKEN);
   myHeaders.append('Content-Type', 'application/json');
 
   const graphql = JSON.stringify({

@@ -7,10 +7,8 @@ const queryMapper: Record<GQLQueryType, GQLQueryInfo> = {
 };
 
 export default async (query: GQLQueryType) => {
-  console.log('TINA TOKEN: ', process.env.TINA_TOKEN);
-
   const myHeaders = new Headers();
-  myHeaders.append('X-API-KEY', process.env.TINA_TOKEN!);
+  myHeaders.append('X-API-KEY', process.env.NEXT_PUBLIC_TINA_TOKEN!);
   myHeaders.append('Content-Type', 'application/json');
 
   const graphql = JSON.stringify({

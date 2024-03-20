@@ -1,18 +1,18 @@
-import type { PickerType } from '@/types/index';
+import type { PickerQueryType } from '@/types/index';
 import * as Checkbox from '@radix-ui/react-checkbox';
 import { CheckIcon } from '@radix-ui/react-icons';
 import { Card, Text } from '@radix-ui/themes';
 import { uniqueUuid } from 'docx';
 import React, { useEffect } from 'react';
 import { wrapFieldsWithMeta } from 'tinacms';
-import tinaFetch from '../../app/actions/graphql/tinaFetch';
+import { queryMapper } from './queryMapper';
 
-export default (type: PickerType) =>
+export default (queryType: PickerQueryType) =>
   wrapFieldsWithMeta((props) => {
     const [values, setValues] = React.useState<string[] | undefined>(undefined);
 
     useEffect(() => {
-      Promise.resolve(tinaFetch('All Auditors')).then(
+      Promise.resolve(queryMapper[queryType]()).then(
         (values) => values && setValues(values)
       );
     }, [props]);
@@ -24,7 +24,7 @@ export default (type: PickerType) =>
     return (
       <div key={uniqueUuid()}>
         <Text className='font-sans text-xs font-semibold text-gray-700 whitespace-normal mb-2'>
-          {type}
+          {queryType}
         </Text>
         <Card className='h-fit max-h-64 overflow-y-scroll rounded-lg bg-tina-grey'>
           {values.map((item: string, i) => (

@@ -16,15 +16,14 @@ npm run dev
 Optionally, you can prepare the project for a deployment (with Vercel). Just add some environment variables:
 
 ```
-TINA_CLIENT_ID=<your value here>
-TINA_TOKEN=<your value here>
-VERCEL_GIT_COMMIT_REF=<your value here>
+NEXT_PUBLIC_TINA_TOKEN=<your value here>
+NEXT_PUBLIC_TINA_CLIENT_ID=<your value here>
+
 NEXT_PUBLIC_SUPABASE_URL=<your value here>
 NEXT_PUBLIC_SUPABASE_KEY=<your value here>
-NEXT_PUBLIC_SUPABASE_CONTENT_TYPE=application/vnd.openxmlformats-officedocument.wordprocessingml.document
 ```
 
-More info here: [Going to Production with Tina Cloud](https://tina.io/docs/tina-cloud/overview/) and [Deploying to Vercel](https://tina.io/docs/tina-cloud/deployment-options/vercel/)
+More info here: [Going to Production with Tina Cloud](https://tina.io/docs/tina-cloud/overview/) and [Supabase Storage Quickstart](https://supabase.com/docs/guides/storage/quickstart)
 
 ## Used Libraries
 
@@ -33,3 +32,4 @@ Please consider a donation! Besides NextJS, this project leverages the following
 - [tinacms](https://github.com/tinacms/tinacms): Visual editing and database
 - [docxjs](https://github.com/dolanmiu/docx) Patching .docx files
 - [mammoth](https://github.com/mwilliamson/mammoth.js): Converting .docx files to html
+- [t3env](https://github.com/t3-oss/t3-env): For env checking

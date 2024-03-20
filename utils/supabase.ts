@@ -32,7 +32,8 @@ export const supabaseUpsert = async (filename: string, file: any) => {
     const { data, error } = await SUPABASE_CLIENT.storage
       .from('Documents')
       .upload(`${filename}.docx`, file, {
-        contentType: process.env.NEXT_PUBLIC_SUPABASE_CONTENT_TYPE!,
+        contentType:
+          'application/vnd.openxmlformats-officedocument.wordprocessingml.document',
         upsert: true,
       });
 

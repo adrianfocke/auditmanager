@@ -5,19 +5,14 @@ import { Card, Text } from '@radix-ui/themes';
 import { uniqueUuid } from 'docx';
 import React, { useEffect } from 'react';
 import { wrapFieldsWithMeta } from 'tinacms';
-import client from '../__generated__/client';
-import { queryMapper } from './queries';
+import tinaFetch from '../../app/actions/graphql/tinaFetch';
 
 export default (type: PickerType) =>
   wrapFieldsWithMeta((props) => {
     const [values, setValues] = React.useState<string[] | undefined>(undefined);
-    console.log('Values for picker: ', values);
-
-    console.log('Tina client in Picker: ', client);
 
     useEffect(() => {
-      console.log('Props for picker: ', props);
-      Promise.resolve(queryMapper[type]()).then(
+      Promise.resolve(tinaFetch('All Auditors')).then(
         (values) => values && setValues(values)
       );
     }, [props]);

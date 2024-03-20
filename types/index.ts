@@ -58,3 +58,10 @@ export type View = {
 export type Time = `${number}:${number}`;
 
 export type PickerType = 'All Auditors';
+
+
+export type GQLQueryType = 'All Auditors';
+export type GQLQueryInfo = {
+  query: string;
+  filter: (data: any) => string[] | null;
+};

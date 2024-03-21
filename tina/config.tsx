@@ -1,16 +1,18 @@
 import React from 'react';
 import { defineConfig } from 'tinacms';
-import { BRANCH } from '../utils/constants';
 import audits from './collections/audits';
 import companies from './collections/companies';
 import files from './collections/files';
 import people from './collections/people';
 import standards from './collections/standards';
 
+const branch =
+  process.env.HEAD || process.env.VERCEL_GIT_COMMIT_REF || 'picker';
+
 export default defineConfig({
   clientId: process.env.NEXT_PUBLIC_TINA_CLIENT_ID ?? '',
   token: process.env.NEXT_PUBLIC_TINA_TOKEN ?? '',
-  branch: BRANCH,
+  branch,
   media: {
     tina: {
       publicFolder: 'public',

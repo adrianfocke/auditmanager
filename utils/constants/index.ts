@@ -7,11 +7,6 @@ export const LETTERS_NUMBERS_HYPEN_BLANK_REGEX = /^[a-zA-Z0-9-\s]+$/;
 export const IS_RUNNING_LOCALLY =
   !!process && process.env.NODE_ENV === 'development';
 
-export const BRANCH =
-  (!!process && process.env.HEAD) ||
-  (!!process && process.env.VERCEL_GIT_COMMIT_REF) ||
-  'picker';
-
 export const SUPABASE_CLIENT = process.env.NEXT_PUBLIC_SUPABASE_URL && process.env.NEXT_PUBLIC_SUPABASE_KEY ? createClient(
   process.env.NEXT_PUBLIC_SUPABASE_URL,
   process.env.NEXT_PUBLIC_SUPABASE_KEY

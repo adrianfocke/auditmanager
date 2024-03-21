@@ -1,6 +1,5 @@
 import type { GQLQueryType } from '@/types/index';
 import { env } from '../../env';
-import { BRANCH } from '../../utils/constants';
 import queryMapper from '../queryMapper';
 
 export default async (query: GQLQueryType) => {
@@ -18,9 +17,12 @@ export default async (query: GQLQueryType) => {
     redirect: 'follow',
   };
 
+  const branch =
+    process.env.HEAD || process.env.VERCEL_GIT_COMMIT_REF || 'picker';
+
   try {
     const result = await fetch(
-      `https://content.tinajs.io/1.4/content/c8d9963a-a8ff-4bee-98b6-3342d7cc52e6/github/${BRANCH}`,
+      `https://content.tinajs.io/1.4/content/c8d9963a-a8ff-4bee-98b6-3342d7cc52e6/github/${branch}`,
       requestOptions as any
     );
     const data = await result.json();

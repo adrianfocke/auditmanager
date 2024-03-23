@@ -18,7 +18,7 @@ export default async (query: GQLQueryType) => {
   };
 
   const branch =
-    process.env.HEAD || process.env.VERCEL_GIT_COMMIT_REF || 'picker';
+    process.env.HEAD || process.env.VERCEL_GIT_COMMIT_REF || 'main';
 
   try {
     const result = await fetch(

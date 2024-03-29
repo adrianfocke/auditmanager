@@ -6,7 +6,6 @@ import {
   CONTEXTS,
   DURATIONS,
   LOCATIONS,
-  SECTIONS,
   TIMES,
 } from '../../../utils/constants/tina';
 import {
@@ -140,10 +139,12 @@ export default {
             },
             {
               name: 'sections',
-              label: 'Standards sections',
               type: 'string',
               list: true,
-              options: SECTIONS,
+              label: ' ' /* will be added later, based on picker type */,
+              ui: {
+                component: Picker('All Standards'),
+              },
             },
             {
               name: 'duration',

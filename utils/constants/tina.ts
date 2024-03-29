@@ -9,29 +9,6 @@ export const CONTEXTS = [
   'Abschlussgespräch letzter Tag',
 ];
 
-const STANDARDS = [
-  [
-    'ISO-27001-ABC',
-    {
-      label: '4.0 – Wichtiger Unterpunkt',
-      value: 'ISO-27001-ABC4.0 – Wichtiger Unterpunkt',
-    },
-    {
-      label: '4.1 – Anderer (unwichtiger) Unterpunkt',
-      value: 'ISO-27001-ABC4.1 – Anderer (unwichtiger) Unterpunkt',
-    },
-  ],
-  [
-    'ISO-1950-200',
-    {
-      label: '3.0 – Wilder Unterpunkt',
-      value: 'ISO-1950-2003.0 – Wilder Unterpunkt',
-    },
-  ],
-];
-
-export const SECTIONS = STANDARDS.flat();
-
 export const AUDIT_TYPES = [
   'Erstzertifizierung',
   '1. Überwachung',

@@ -13,7 +13,7 @@ export default (queryType: GQLQueryType) =>
     const [values, setValues] = React.useState<string[] | undefined>(undefined);
 
     useEffect(() => {
-      Promise.resolve(fetch('All Auditors')).then(
+      Promise.resolve(fetch(queryType)).then(
         (values) =>
           values &&
           setValues(queryMapper[queryType].display(values) as string[])

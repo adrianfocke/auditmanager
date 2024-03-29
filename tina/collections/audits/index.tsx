@@ -6,7 +6,6 @@ import {
   CONTEXTS,
   DURATIONS,
   LOCATIONS,
-  PARTNERS,
   SECTIONS,
   TIMES,
 } from '../../../utils/constants/tina';
@@ -154,10 +153,12 @@ export default {
             },
             {
               name: 'partners',
-              label: 'Partners',
               type: 'string',
               list: true,
-              options: PARTNERS,
+              label: ' ' /* will be added later, based on picker type */,
+              ui: {
+                component: Picker('All Partners'),
+              },
             },
             {
               name: 'auditors',

@@ -57,8 +57,6 @@ export const LOCATIONS = [
   '1020 Wien, Lassallestraße 5',
 ];
 
-export const PARTNERS = ['Gerald Färber', 'Johnny Partnerman'];
-
 export const TIMES = [
   '06:30',
   '06:45',

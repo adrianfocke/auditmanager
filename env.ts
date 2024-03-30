@@ -5,12 +5,14 @@ import { z } from 'zod';
 export const env = createEnv({
   server: {},
   client: {
+    NEXT_PUBLIC_TINA_URL: z.string().url(),
     NEXT_PUBLIC_TINA_TOKEN: z.string().min(1),
     NEXT_PUBLIC_TINA_CLIENT_ID: z.string().min(1),
     NEXT_PUBLIC_SUPABASE_URL: z.string().url(),
     NEXT_PUBLIC_SUPABASE_KEY: z.string().min(1),
   },
   runtimeEnv: {
+    NEXT_PUBLIC_TINA_URL: process.env.NEXT_PUBLIC_TINA_URL,
     NEXT_PUBLIC_TINA_TOKEN: process.env.NEXT_PUBLIC_TINA_TOKEN,
     NEXT_PUBLIC_TINA_CLIENT_ID: process.env.NEXT_PUBLIC_TINA_CLIENT_ID,
     NEXT_PUBLIC_SUPABASE_URL: process.env.NEXT_PUBLIC_SUPABASE_URL,

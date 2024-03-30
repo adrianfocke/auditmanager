@@ -1,14 +1,3 @@
-export const CONTEXTS = [
-  'Eröffnungsgespräch erster Tag',
-  'Eröffnungsgespräch mittlerer Tag',
-  'Eröffnungsgespräch letzter Tag',
-  'Context and compliance',
-  'Strategic planning',
-  'Abschlussgespräch erster Tag',
-  'Abschlussgespräch mittlerer Tag',
-  'Abschlussgespräch letzter Tag',
-];
-
 export const AUDIT_TYPES = [
   'Erstzertifizierung',
   '1. Überwachung',

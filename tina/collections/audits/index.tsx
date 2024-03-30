@@ -1,7 +1,6 @@
 import React from 'react';
 import { Collection } from 'tinacms';
 import {
-  AUDIT_TYPES,
   AUDIT_TYPE_RELATIONS,
   DURATIONS,
   LOCATIONS,
@@ -360,9 +359,11 @@ export default {
     },
     {
       name: 'method',
-      label: 'Method',
       type: 'string',
-      options: AUDIT_TYPES,
+      label: ' ' /* will be added later, based on picker type */,
+      ui: {
+        component: Picker('Constants Audit Type'),
+      },
     },
   ],
 } as Collection;

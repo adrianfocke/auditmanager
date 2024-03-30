@@ -1,14 +1,3 @@
-export const AUDIT_TYPES = [
-  'Erstzertifizierung',
-  '1. Überwachung',
-  '2. Überwachung',
-  'Re-Zertifizierung',
-  'Vor-Audit',
-  'Erweiterung',
-  'Andere',
-  'Eigendefinition',
-];
-
 export const AUDIT_TYPE_RELATIONS = [
   'Einzel-Audit',
   'Kombiniertes Audit',

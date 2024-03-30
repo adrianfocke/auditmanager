@@ -12,6 +12,19 @@
         "Abschlussgespräch mittlerer Tag",
         "Abschlussgespräch letzter Tag"
       ]
+    },
+    {
+      "name": "Audit Type",
+      "values": [
+        "Erstzertifizierung",
+        "1. Überwachung",
+        "2. Überwachung",
+        "Re-Zertifizierung",
+        "Vor-Audit",
+        "Erweiterung",
+        "Andere",
+        "Eigendefinition"
+      ]
     }
   ]
 }

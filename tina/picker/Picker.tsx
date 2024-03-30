@@ -35,7 +35,7 @@ export default (queryType: GQLQueryType) =>
               <Checkbox.Root
                 onClick={() => {
                   // TODO single value sleeker
-                  if (queryType === 'Constants Audit Context') {
+                  if (queryType.includes('Constants')) {
                     props.input.onChange(item);
                     return;
                   }

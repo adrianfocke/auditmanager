@@ -13,9 +13,10 @@ npm install
 npm run dev
 ```
 
-Optionally, you can prepare the project for a deployment (with Vercel). Just add some environment variables:
+Prepare the project for a deployment (with Vercel). Just add some environment variables:
 
 ```
+NEXT_PUBLIC_TINA_URL=http://localhost:4001/graphql (or in production the tinacms url)
 NEXT_PUBLIC_TINA_TOKEN=<your value here>
 NEXT_PUBLIC_TINA_CLIENT_ID=<your value here>
 

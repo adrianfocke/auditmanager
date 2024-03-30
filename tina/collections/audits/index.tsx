@@ -3,7 +3,6 @@ import { Collection } from 'tinacms';
 import {
   AUDIT_TYPES,
   AUDIT_TYPE_RELATIONS,
-  CONTEXTS,
   DURATIONS,
   LOCATIONS,
   TIMES,
@@ -125,9 +124,11 @@ export default {
           fields: [
             {
               name: 'reusableContext',
-              label: 'Reusable Context',
               type: 'string',
-              options: CONTEXTS,
+              label: ' ' /* will be added later, based on picker type */,
+              ui: {
+                component: Picker('Constants Audit Context'),
+              },
             },
             {
               name: 'context',

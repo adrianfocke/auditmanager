@@ -2,6 +2,7 @@ import React from 'react';
 import { defineConfig } from 'tinacms';
 import audits from './collections/audits';
 import companies from './collections/companies';
+import constants from './collections/constants';
 import files from './collections/files';
 import people from './collections/people';
 import standards from './collections/standards';
@@ -23,6 +24,6 @@ export default defineConfig({
     outputFolder: 'admin',
   },
   schema: {
-    collections: [audits, companies, files, people, standards],
+    collections: [audits, companies, constants, files, people, standards],
   },
 });

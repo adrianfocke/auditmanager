@@ -1,0 +1,17 @@
+{
+  "constants": [
+    {
+      "name": "Audit Context",
+      "values": [
+        "Eröffnungsgespräch erster Tag",
+        "Eröffnungsgespräch mittlerer Tag",
+        "Eröffnungsgespräch letzter Tag",
+        "Context and compliance",
+        "Strategic planning",
+        "Abschlussgespräch erster Tag",
+        "Abschlussgespräch mittlerer Tag",
+        "Abschlussgespräch letzter Tag"
+      ]
+    }
+  ]
+}

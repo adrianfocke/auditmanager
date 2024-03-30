@@ -34,6 +34,12 @@ export default (queryType: GQLQueryType) =>
             <div key={uniqueUuid()}>
               <Checkbox.Root
                 onClick={() => {
+                  // TODO single value sleeker
+                  if (queryType === 'Constants Audit Context') {
+                    props.input.onChange(item);
+                    return;
+                  }
+
                   if (props.input.value.includes(item)) {
                     const valuesWithoutCurrent = props.input.value.filter(
                       (all: any) => all !== item

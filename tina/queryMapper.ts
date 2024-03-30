@@ -4,6 +4,7 @@ import fetchAllPartners from '../app/actions/graphql/fetchAllPartners';
 import fetchAllStandards from '../app/actions/graphql/fetchAllStandards';
 import fetchConstantAuditContext from '../app/actions/graphql/fetchConstantAuditContext';
 import fetchConstantAuditType from '../app/actions/graphql/fetchConstantAuditType';
+import fetchConstantAuditTypeRelation from '../app/actions/graphql/fetchConstantAuditTypeRelation';
 
 export default {
   'All Auditors': fetchAllAuditors,
@@ -11,4 +12,5 @@ export default {
   'All Standards': fetchAllStandards,
   'Constants Audit Context': fetchConstantAuditContext,
   'Constants Audit Type': fetchConstantAuditType,
+  'Constants Audit Type Relation': fetchConstantAuditTypeRelation,
 } as Record<GQLQueryType, GQLQueryInfo>;

@@ -1,11 +1,6 @@
 import React from 'react';
 import { Collection } from 'tinacms';
-import {
-  AUDIT_TYPE_RELATIONS,
-  DURATIONS,
-  LOCATIONS,
-  TIMES,
-} from '../../../utils/constants/tina';
+import { DURATIONS, LOCATIONS, TIMES } from '../../../utils/constants/tina';
 import {
   readableDateFromDatetime,
   readableFileNameFromEntity,
@@ -65,9 +60,11 @@ export default {
         },
         {
           name: 'isoAuditTypeRelation',
-          label: 'Type of Audit of this ISO',
           type: 'string',
-          options: AUDIT_TYPE_RELATIONS,
+          label: ' ' /* will be added later, based on picker type */,
+          ui: {
+            component: Picker('Constants Audit Type Relation'),
+          },
         },
         {
           name: 'registrationNumber',

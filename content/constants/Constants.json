@@ -1,6 +1,17 @@
 {
   "constants": [
     {
+      "name": "Audit Type Relation",
+      "values": [
+        "Einzel-Audit",
+        "Kombiniertes Audit",
+        "Integriertes Audit",
+        "Multi-Site-Audit / Matrix-Audit",
+        "Andere",
+        "Eigendefinition"
+      ]
+    },
+    {
       "name": "Audit Context",
       "values": [
         "Eröffnungsgespräch erster Tag",

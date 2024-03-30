@@ -1,12 +1,3 @@
-export const AUDIT_TYPE_RELATIONS = [
-  'Einzel-Audit',
-  'Kombiniertes Audit',
-  'Integriertes Audit',
-  'Multi-Site-Audit / Matrix-Audit',
-  'Andere',
-  'Eigendefinition',
-];
-
 export const LOCATIONS = [
   '1100 Wien, Am Hauptbahnhof 1',
   '1020 Wien, Lassallestraße 5',

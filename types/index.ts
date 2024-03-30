@@ -64,7 +64,8 @@ export type GQLQueryType =
   | 'All Partners'
   | 'All Standards'
   | 'Constants Audit Context'
-  | 'Constants Audit Type';
+  | 'Constants Audit Type'
+  | 'Constants Audit Type Relation';
 export interface GQLQueryInfo {
   query: string;
   variables: (variables?: Record<string, any>) => Record<string, any>;

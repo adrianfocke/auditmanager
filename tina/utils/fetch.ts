@@ -13,7 +13,7 @@ export default async (query: GQLQueryType, variables?: Record<string, any>) => {
     // TODO rely on variables from parameters
     variables:
       variables || query.includes('Constants')
-        ? queryMapper[query].variables()
+        ? queryMapper[query].variables(variables ?? {})
         : null,
   });
   const requestOptions = {

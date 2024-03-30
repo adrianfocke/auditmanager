@@ -1,4 +1,5 @@
 import type { GQLQueryInfo, GQLQueryType } from '@/types/index';
+import createFile from '../app/actions/graphql/createFile';
 import fetchAllAuditors from '../app/actions/graphql/fetchAllAuditors';
 import fetchAllPartners from '../app/actions/graphql/fetchAllPartners';
 import fetchAllStandards from '../app/actions/graphql/fetchAllStandards';
@@ -13,4 +14,5 @@ export default {
   'Constants Audit Context': fetchConstantAuditContext,
   'Constants Audit Type': fetchConstantAuditType,
   'Constants Audit Type Relation': fetchConstantAuditTypeRelation,
+  'File Create File': createFile,
 } as Record<GQLQueryType, GQLQueryInfo>;

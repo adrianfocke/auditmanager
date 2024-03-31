@@ -5,7 +5,6 @@ import { FilePlusIcon } from '@radix-ui/react-icons';
 import { Button, Card, Flex, Text } from '@radix-ui/themes';
 import { revalidatePath } from 'next/cache';
 import { useRouter } from 'next/navigation';
-import fetch from '../../tina/utils/fetch';
 import { LETTERS_NUMBERS_HYPEN_BLANK_REGEX } from '../../utils/constants';
 
 /** Card component that includes a form to create new files */
@@ -22,14 +21,6 @@ export default () => {
       </Flex>
       <Form.Root
         onSubmit={async (event) => {
-          Promise.resolve(
-            fetch('File Create File', {
-              name: Object.fromEntries(new FormData(event.currentTarget))
-                .name as string,
-            })
-          )
-          .catch((error) => console.error(error));
-
           event.stopPropagation();
         }}
       >

@@ -1,24 +1,14 @@
-import type { GQLQueryType } from '@/types/index';
+import type { TinaBackendParcel } from '@/types/index';
 import * as Checkbox from '@radix-ui/react-checkbox';
 import { CheckIcon } from '@radix-ui/react-icons';
 import { Card, Text } from '@radix-ui/themes';
 import { uniqueUuid } from 'docx';
-import React, { useEffect } from 'react';
+import React from 'react';
 import { wrapFieldsWithMeta } from 'tinacms';
-import queryMapper from '../queryMapper';
-import fetch from '../utils/fetch';
 
-export default (queryType: GQLQueryType) =>
+export default (queryType: TinaBackendParcel['query']) =>
   wrapFieldsWithMeta((props) => {
     const [values, setValues] = React.useState<string[] | undefined>(undefined);
-
-    useEffect(() => {
-      Promise.resolve(fetch(queryType)).then(
-        (values) =>
-          values &&
-          setValues(queryMapper[queryType].display(values) as string[])
-      );
-    }, [props]);
 
     if (!values) {
       return null;

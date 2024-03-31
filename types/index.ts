@@ -57,20 +57,6 @@ export type View = {
 
 export type Time = `${number}:${number}`;
 
-export type GQLQueryType =
-  | 'All Auditors'
-  | 'All Partners'
-  | 'All Standards'
-  | 'Constants Audit Context'
-  | 'Constants Audit Type'
-  | 'Constants Audit Type Relation'
-  | 'File Create File';
-export interface GQLQueryInfo {
-  query: string;
-  variables: (variables?: Record<string, any>) => Record<string, any>;
-  display: (data: any) => string | string[] | null;
-}
-
 export type TinaBackendParcel = {
   query: keyof typeof client.queries;
   variables?: Record<string, any>;

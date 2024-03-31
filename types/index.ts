@@ -1,8 +1,6 @@
 import type { IPatch } from 'docx';
-import {
-  FileQuery,
-  type ConstantConnectionEdges,
-} from 'tina/__generated__/types';
+import { FileQuery } from 'tina/__generated__/types';
+import type client from '../tina/__generated__/client';
 
 export type Skeleton = `/uploads/skeletons/${string}.docx`;
 export type Placeholders = `{{field_${string}}}`[];
@@ -71,4 +69,13 @@ export interface GQLQueryInfo {
   query: string;
   variables: (variables?: Record<string, any>) => Record<string, any>;
   display: (data: any) => string | string[] | null;
+}
+
+export type TinaBackendParcel = {
+  query: keyof typeof client.queries;
+  variables?: Record<string, any>;
 };
+
+export enum Endpoints {
+  TINA = '/api/tina',
+}

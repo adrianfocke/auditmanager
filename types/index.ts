@@ -62,7 +62,12 @@ export type TinaBackendParcel = {
   variables?: Record<string, any>;
 };
 
-export type PickerType = 'Audit Context' | 'Audit Type' | 'Audit Type Relation';
+export type PickerType =
+  | 'All Auditors'
+  | 'All Partners'
+  | 'Audit Context'
+  | 'Audit Type'
+  | 'Audit Type Relation';
 export interface PickerTypeSettings {
   display: (data: any) => any;
   query: TinaBackendParcel['query'];

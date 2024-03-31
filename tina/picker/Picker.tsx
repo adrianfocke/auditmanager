@@ -8,6 +8,8 @@ import { wrapFieldsWithMeta } from 'tinacms';
 import { useTinaQuery } from '../utils';
 import pickerMapper from './pickerMapper';
 
+// TODO also use directly in audit
+
 export default (pickerType: PickerType) =>
   wrapFieldsWithMeta((props) => {
     const { data, error, isLoading } = useTinaQuery(

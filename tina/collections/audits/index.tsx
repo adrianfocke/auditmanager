@@ -155,7 +155,7 @@ export default {
               list: true,
               label: ' ' /* will be added later, based on picker type */,
               ui: {
-                component: Picker('Audit Type'),
+                component: Picker('All Partners'),
               },
             },
             {
@@ -164,7 +164,7 @@ export default {
               list: true,
               label: ' ' /* will be added later, based on picker type */,
               ui: {
-                component: Picker('Audit Type'),
+                component: Picker('All Auditors'),
               },
             },
             {

@@ -11,3 +11,12 @@ export const SUPABASE_CLIENT = process.env.NEXT_PUBLIC_SUPABASE_URL && process.e
   process.env.NEXT_PUBLIC_SUPABASE_URL,
   process.env.NEXT_PUBLIC_SUPABASE_KEY
 ) : undefined;
+
+export const TINA_URL =
+  !!process &&
+  process.env.NEXT_PUBLIC_TINA_URL &&
+  process.env.NEXT_PUBLIC_TINA_URL.includes('localhost')
+    ? process.env.NEXT_PUBLIC_TINA_URL
+    : `${process.env.NEXT_PUBLIC_TINA_URL}${
+        process.env.HEAD || process.env.VERCEL_GIT_COMMIT_REF || 'main'
+      }`;

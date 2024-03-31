@@ -1,15 +1,6 @@
 import React from 'react';
 import { Collection } from 'tinacms';
-import {
-  AUDIT_TYPES,
-  AUDIT_TYPE_RELATIONS,
-  CONTEXTS,
-  DURATIONS,
-  LOCATIONS,
-  PARTNERS,
-  SECTIONS,
-  TIMES,
-} from '../../../utils/constants/tina';
+import { DURATIONS, LOCATIONS, TIMES } from '../../../utils/constants/tina';
 import {
   readableDateFromDatetime,
   readableFileNameFromEntity,
@@ -69,9 +60,11 @@ export default {
         },
         {
           name: 'isoAuditTypeRelation',
-          label: 'Type of Audit of this ISO',
           type: 'string',
-          options: AUDIT_TYPE_RELATIONS,
+          label: ' ' /* will be added later, based on picker type */,
+          ui: {
+            component: Picker('Audit Type Relation'),
+          },
         },
         {
           name: 'registrationNumber',
@@ -127,9 +120,11 @@ export default {
           fields: [
             {
               name: 'reusableContext',
-              label: 'Reusable Context',
               type: 'string',
-              options: CONTEXTS,
+              label: ' ' /* will be added later, based on picker type */,
+              ui: {
+                component: Picker('Audit Context'),
+              },
             },
             {
               name: 'context',
@@ -141,10 +136,12 @@ export default {
             },
             {
               name: 'sections',
-              label: 'Standards sections',
               type: 'string',
               list: true,
-              options: SECTIONS,
+              label: ' ' /* will be added later, based on picker type */,
+              ui: {
+                component: Picker('Audit Type'),
+              },
             },
             {
               name: 'duration',
@@ -154,10 +151,12 @@ export default {
             },
             {
               name: 'partners',
-              label: 'Partners',
               type: 'string',
               list: true,
-              options: PARTNERS,
+              label: ' ' /* will be added later, based on picker type */,
+              ui: {
+                component: Picker('All Partners'),
+              },
             },
             {
               name: 'auditors',
@@ -357,9 +356,11 @@ export default {
     },
     {
       name: 'method',
-      label: 'Method',
       type: 'string',
-      options: AUDIT_TYPES,
+      label: ' ' /* will be added later, based on picker type */,
+      ui: {
+        component: Picker('Audit Type'),
+      },
     },
   ],
 } as Collection;

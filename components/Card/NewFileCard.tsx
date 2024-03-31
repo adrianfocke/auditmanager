@@ -1,10 +1,9 @@
 'use client';
-
-import createFile from '@/app/actions/createFile';
 import { AccessibleIcon } from '@radix-ui/react-accessible-icon';
 import * as Form from '@radix-ui/react-form';
 import { FilePlusIcon } from '@radix-ui/react-icons';
 import { Button, Card, Flex, Text } from '@radix-ui/themes';
+import { revalidatePath } from 'next/cache';
 import { useRouter } from 'next/navigation';
 import { LETTERS_NUMBERS_HYPEN_BLANK_REGEX } from '../../utils/constants';
 
@@ -22,11 +21,7 @@ export default () => {
       </Flex>
       <Form.Root
         onSubmit={async (event) => {
-          await createFile(
-            Object.fromEntries(new FormData(event.currentTarget)).name as string
-          );
           event.stopPropagation();
-          event.preventDefault();
         }}
       >
         <Form.Field name='name'>

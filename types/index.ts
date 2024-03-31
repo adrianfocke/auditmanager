@@ -1,5 +1,6 @@
 import type { IPatch } from 'docx';
 import { FileQuery } from 'tina/__generated__/types';
+import type client from '../tina/__generated__/client';
 
 export type Skeleton = `/uploads/skeletons/${string}.docx`;
 export type Placeholders = `{{field_${string}}}`[];
@@ -54,11 +55,22 @@ export type View = {
   viewType: ViewType | undefined;
 };
 
-
 export type Time = `${number}:${number}`;
 
-export type GQLQueryType = 'All Auditors';
-export interface GQLQueryInfo {
-  query: string;
-  display: (data: any) => string | string[] | null;
+export type TinaBackendParcel = {
+  query: keyof typeof client.queries;
+  variables?: Record<string, any>;
 };
+
+export type PickerType =
+  | 'All Auditors'
+  | 'All Partners'
+  | 'Audit Context'
+  | 'Audit Type'
+  | 'Audit Type Relation';
+export interface PickerTypeSettings {
+  display: (data: any) => any;
+  query: TinaBackendParcel['query'];
+  variables: TinaBackendParcel['variables'];
+  variant: 'SingleValue' | 'MultiValue';
+}

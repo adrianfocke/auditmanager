@@ -1,63 +1,7 @@
-export const CONTEXTS = [
-  'Eröffnungsgespräch erster Tag',
-  'Eröffnungsgespräch mittlerer Tag',
-  'Eröffnungsgespräch letzter Tag',
-  'Context and compliance',
-  'Strategic planning',
-  'Abschlussgespräch erster Tag',
-  'Abschlussgespräch mittlerer Tag',
-  'Abschlussgespräch letzter Tag',
-];
-
-const STANDARDS = [
-  [
-    'ISO-27001-ABC',
-    {
-      label: '4.0 – Wichtiger Unterpunkt',
-      value: 'ISO-27001-ABC4.0 – Wichtiger Unterpunkt',
-    },
-    {
-      label: '4.1 – Anderer (unwichtiger) Unterpunkt',
-      value: 'ISO-27001-ABC4.1 – Anderer (unwichtiger) Unterpunkt',
-    },
-  ],
-  [
-    'ISO-1950-200',
-    {
-      label: '3.0 – Wilder Unterpunkt',
-      value: 'ISO-1950-2003.0 – Wilder Unterpunkt',
-    },
-  ],
-];
-
-export const SECTIONS = STANDARDS.flat();
-
-export const AUDIT_TYPES = [
-  'Erstzertifizierung',
-  '1. Überwachung',
-  '2. Überwachung',
-  'Re-Zertifizierung',
-  'Vor-Audit',
-  'Erweiterung',
-  'Andere',
-  'Eigendefinition',
-];
-
-export const AUDIT_TYPE_RELATIONS = [
-  'Einzel-Audit',
-  'Kombiniertes Audit',
-  'Integriertes Audit',
-  'Multi-Site-Audit / Matrix-Audit',
-  'Andere',
-  'Eigendefinition',
-];
-
 export const LOCATIONS = [
   '1100 Wien, Am Hauptbahnhof 1',
   '1020 Wien, Lassallestraße 5',
 ];
-
-export const PARTNERS = ['Gerald Färber', 'Johnny Partnerman'];
 
 export const TIMES = [
   '06:30',

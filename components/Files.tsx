@@ -12,12 +12,6 @@ type FilesProps = {
 };
 
 export default ({ files }: FilesProps) => {
-
-  const { data, error, isLoading } = useTinaQuery('constant', {
-    relativePath: 'Constants.json',
-  });
-  console.log('Data: ', data);
-
   return (
     <Grid columns='3' gap='3'>
       <NewFileCard />

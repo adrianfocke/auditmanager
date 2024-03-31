@@ -2,7 +2,7 @@ import useSWR from 'swr';
 import type { PatchBackendParcel } from './route';
 
 const fetcher = async (...args: any[]) => {
-  const req = await fetch('/api/patch', {
+  const req = await fetch('/api/document/patch', {
     method: 'POST',
     body: JSON.stringify(args[0]),
   });

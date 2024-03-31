@@ -1,7 +1,7 @@
 import type { FileQuery } from '@/tina/__generated__/types';
 import type { Placeholders } from '@/types/index';
 import { NextResponse } from 'next/server';
-import patchDocument from '../../../utils/patchDocument';
+import patchDocument from '../../../../utils/patchDocument';
 
 export type PatchBackendParcel = {
   file: FileQuery;

@@ -1,11 +1,24 @@
-import downloadDocument from '@/utils/downloadDocument';
+import { IS_RUNNING_LOCALLY } from '@/utils/constants';
 import { DownloadIcon, ListBulletIcon } from '@radix-ui/react-icons';
 import { Button, Card, Flex } from '@radix-ui/themes';
 import { useRouter } from 'next/navigation';
-import { IS_RUNNING_LOCALLY } from 'utils/constants';
+import { downloadDocument } from '../app/api/document/download/route';
 
 type EditorPanelProps = {
   patchedDocument?: string;
+};
+
+const downloadBlob = (blob: Blob, fileName: string): void => {
+  const link = document.createElement('a');
+  link.href = URL.createObjectURL(blob);
+  link.download = fileName;
+
+  document.body.appendChild(link);
+
+  link.click();
+
+  document.body.removeChild(link);
+  URL.revokeObjectURL(link.href);
 };
 
 export default ({ patchedDocument }: EditorPanelProps) => {
@@ -29,9 +42,23 @@ export default ({ patchedDocument }: EditorPanelProps) => {
           className='bg-[#0c6bff]'
           title={`Download file ${patchedDocument}`}
           onClick={async () => {
-            IS_RUNNING_LOCALLY
-              ? router.push(`/${patchedDocument}`)
-              : await downloadDocument(patchedDocument!);
+            if (IS_RUNNING_LOCALLY) {
+              router.push(`/${patchedDocument}`);
+              return;
+            }
+
+            const documentAsUint8Array = await downloadDocument(
+              patchedDocument!
+            ).then((data: Uint8Array) => data);
+
+            const blob = new Blob([documentAsUint8Array]);
+
+            const downloadLink = document.createElement('a');
+            downloadLink.href = URL.createObjectURL(blob);
+            downloadLink.download = patchedDocument!;
+            document.body.appendChild(downloadLink);
+            downloadLink.click();
+            document.body.removeChild(downloadLink);
           }}
         >
           <DownloadIcon width='16' height='16' />

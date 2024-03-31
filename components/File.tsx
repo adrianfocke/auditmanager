@@ -1,5 +1,5 @@
 'use client';
-import { usePatchDocument } from '@/app/api/patch/hook';
+import { usePatchDocument } from '@/app/api/document/patch/hook';
 import patchableEntityMapper from '@/tina/patchable-entity/patchableEntityMapper';
 import type { Placeholders } from '@/types/index';
 import { uniqueUuid } from 'docx';

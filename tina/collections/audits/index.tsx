@@ -63,7 +63,7 @@ export default {
           type: 'string',
           label: ' ' /* will be added later, based on picker type */,
           ui: {
-            component: Picker('constant'),
+            component: Picker('Audit Type Relation'),
           },
         },
         {
@@ -123,7 +123,7 @@ export default {
               type: 'string',
               label: ' ' /* will be added later, based on picker type */,
               ui: {
-                component: Picker('constant'),
+                component: Picker('Audit Context'),
               },
             },
             {
@@ -140,7 +140,7 @@ export default {
               list: true,
               label: ' ' /* will be added later, based on picker type */,
               ui: {
-                component: Picker('constant'),
+                component: Picker('Audit Type'),
               },
             },
             {
@@ -155,7 +155,7 @@ export default {
               list: true,
               label: ' ' /* will be added later, based on picker type */,
               ui: {
-                component: Picker('constant'),
+                component: Picker('Audit Type'),
               },
             },
             {
@@ -164,7 +164,7 @@ export default {
               list: true,
               label: ' ' /* will be added later, based on picker type */,
               ui: {
-                component: Picker('constant'),
+                component: Picker('Audit Type'),
               },
             },
             {
@@ -359,7 +359,7 @@ export default {
       type: 'string',
       label: ' ' /* will be added later, based on picker type */,
       ui: {
-        component: Picker('constant'),
+        component: Picker('Audit Type'),
       },
     },
   ],

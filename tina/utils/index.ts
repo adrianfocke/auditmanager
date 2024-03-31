@@ -1,8 +1,8 @@
-import { Endpoints, type TinaBackendParcel } from '@/types/index';
+import type { TinaBackendParcel } from '@/types/index';
 import useSWR from 'swr';
 
 const tinaFetcher = async (...args: any[]) => {
-  const req = await fetch(Endpoints.TINA, {
+  const req = await fetch('/api/tina', {
     method: 'POST',
     body: JSON.stringify(args[0]),
   });

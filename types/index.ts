@@ -62,6 +62,10 @@ export type TinaBackendParcel = {
   variables?: Record<string, any>;
 };
 
-export enum Endpoints {
-  TINA = '/api/tina',
+export type PickerType = 'Audit Context' | 'Audit Type' | 'Audit Type Relation';
+export interface PickerTypeSettings {
+  display: (data: any) => any;
+  query: TinaBackendParcel['query'];
+  variables: TinaBackendParcel['variables'];
+  variant: 'SingleValue' | 'MultiValue';
 }

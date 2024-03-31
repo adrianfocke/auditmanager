@@ -1,9 +1,9 @@
 'use client';
 import patchDocument from '@/app/actions/patchDocument';
+import patchableEntityMapper from '@/tina/patchable-entity/patchableEntityMapper';
 import type { Placeholders, Skeleton } from '@/types/index';
 import { uniqueUuid } from 'docx';
 import { useEffect, useState } from 'react';
-import entityMapper from 'tina/entityMapper';
 import { useTina } from 'tinacms/dist/react';
 import { FileQuery } from '../tina/__generated__/types';
 import EditorPanel from './EditorPanel';
@@ -23,7 +23,7 @@ type FileProps = {
 export default ({ placeholders, result }: FileProps) => {
   const { data } = useTina(result);
   const [patchedDocument, setPatchedDocument] = useState<string | undefined>();
-  const givenEntity = entityMapper(data.file.entity?.__typename!);
+  const givenEntity = patchableEntityMapper[data.file.entity?.__typename!];
 
   useEffect(
     () => {

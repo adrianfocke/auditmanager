@@ -1,5 +1,7 @@
 import { SUPABASE_CLIENT } from './constants';
 
+// TODO do on server
+
 export const supabaseDownload = async (filename: string) => {
   if (!SUPABASE_CLIENT) {
     return null

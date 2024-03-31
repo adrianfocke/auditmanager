@@ -5,12 +5,6 @@ import type client from '../tina/__generated__/client';
 export type Skeleton = `/uploads/skeletons/${string}.docx`;
 export type Placeholders = `{{field_${string}}}`[];
 
-/** Entity-bound placeholder to value relation */
-export type PlaceholderRecord<T extends string | number | symbol> = Record<
-  T,
-  any
->;
-
 export type FileLinkInfo = {
   link: string;
   name: string;

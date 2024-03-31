@@ -1,12 +1,12 @@
+import type { FileQuery } from '@/tina/__generated__/types';
 import type { PatchableEntity, Patches } from '@/types/index';
-import type { FileQuery } from 'tina/__generated__/types';
-import { retrievePatchInstruction } from './patch';
-import type { AuditPlaceholder } from './placeholders';
-import tinaFields from './tinaFields';
-import values from './values';
-import viewTypes from './viewTypes';
+import { retrievePatchInstruction } from './handle/patch';
+import type { AuditPlaceholder } from './handle/placeholders';
+import tinaFields from './handle/tinaFields';
+import values from './handle/values';
+import viewTypes from './handle/viewTypes';
 
-export const audit: PatchableEntity = {
+export default {
   placeholderTinaField: (data: FileQuery, placeholder: string) =>
     tinaFields(placeholder, data),
 
@@ -29,4 +29,4 @@ export const audit: PatchableEntity = {
 
     return patches;
   },
-};
+} as PatchableEntity;

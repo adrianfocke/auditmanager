@@ -1,4 +1,4 @@
-import downloadDocument from '@/app/actions/downloadDocument';
+import downloadDocument from '@/utils/downloadDocument';
 import { DownloadIcon, ListBulletIcon } from '@radix-ui/react-icons';
 import { Button, Card, Flex } from '@radix-ui/themes';
 import { useRouter } from 'next/navigation';

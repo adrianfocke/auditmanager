@@ -1,5 +1,3 @@
-import { supabaseDownload } from 'utils/supabase';
-
 const downloadBlob = (blob: Blob, fileName: string): void => {
   const link = document.createElement('a');
   link.href = URL.createObjectURL(blob);
@@ -14,7 +12,9 @@ const downloadBlob = (blob: Blob, fileName: string): void => {
 };
 
 export default async (patchedDocument: string) => {
-  const patchedDocumentBlob = await supabaseDownload(patchedDocument);
+  // TODO
+  const patchedDocumentBlob = new Blob();
+  // const patchedDocumentBlob = await supabaseDownload(patchedDocument);
 
   if (patchedDocumentBlob) {
     downloadBlob(patchedDocumentBlob, patchedDocument);

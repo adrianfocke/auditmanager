@@ -24,7 +24,9 @@ export default async function Page({ params }: Params) {
 
   return (
     <Suspense fallback={<Text>Loading...</Text>}>
-      <File placeholders={placeholders} result={result} />
+      {result && placeholders && (
+        <File placeholders={placeholders} result={result} />
+      )}
     </Suspense>
   );
 }

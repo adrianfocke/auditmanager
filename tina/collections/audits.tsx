@@ -1,6 +1,5 @@
-import React from 'react';
 import { Collection } from 'tinacms';
-import { DURATIONS, LOCATIONS, TIMES } from '../../utils/constants/tina';
+import { DURATIONS, LOCATIONS, TIMES } from '../../utils/constants';
 import {
   readableDateFromDatetime,
   readableFileNameFromEntity,

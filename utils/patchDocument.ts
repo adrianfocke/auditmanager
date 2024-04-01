@@ -1,11 +1,10 @@
 'use server';
 import patchableEntityMapper from '@/tina/patchable-entity/patchableEntityMapper';
-import type { Patches, Skeleton } from '@/types/index';
+import type { PatchBackendParcel, Patches, Skeleton } from '@/types/index';
 import { createClient } from '@supabase/supabase-js';
 import { patchDocument } from 'docx';
 import { readFileSync, writeFileSync } from 'fs';
 import path from 'path';
-import type { PatchBackendParcel } from '../app/api/document/patch/route';
 import { staticFilePath } from './path';
 
 export default async (patchParcel: PatchBackendParcel) => {

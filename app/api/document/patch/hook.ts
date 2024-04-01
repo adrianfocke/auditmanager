@@ -1,5 +1,5 @@
+import type { PatchBackendParcel } from '@/types/index';
 import useSWR from 'swr';
-import type { PatchBackendParcel } from './route';
 
 const fetcher = async (...args: any[]) => {
   const req = await fetch('/api/document/patch', {

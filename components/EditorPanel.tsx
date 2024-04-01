@@ -2,7 +2,6 @@ import { IS_RUNNING_LOCALLY } from '@/utils/constants';
 import { DownloadIcon, ListBulletIcon } from '@radix-ui/react-icons';
 import { Button, Card, Flex } from '@radix-ui/themes';
 import { useRouter } from 'next/navigation';
-import { downloadDocument } from '../app/api/document/download/route';
 
 type EditorPanelProps = {
   patchedDocument?: string;
@@ -46,6 +45,15 @@ export default ({ patchedDocument }: EditorPanelProps) => {
               router.push(`/${patchedDocument}`);
               return;
             }
+
+            const downloadDocument = async (document: string) => {
+              const req = await fetch('/api/document/download', {
+                method: 'POST',
+                body: JSON.stringify(document),
+              });
+
+              return await req.json();
+            };
 
             const documentAsUint8Array = await downloadDocument(
               patchedDocument!

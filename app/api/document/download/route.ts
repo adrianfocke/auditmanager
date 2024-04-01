@@ -1,21 +1,5 @@
-import type { FileQuery } from '@/tina/__generated__/types';
-import type { Placeholders } from '@/types/index';
 import { createClient } from '@supabase/supabase-js';
 import { NextResponse } from 'next/server';
-
-export type PatchBackendParcel = {
-  file: FileQuery;
-  placeholders: Placeholders;
-};
-
-export const downloadDocument = async (document: string) => {
-  const req = await fetch('/api/document/download', {
-    method: 'POST',
-    body: JSON.stringify(document),
-  });
-
-  return await req.json();
-};
 
 export async function POST(request: Request) {
   const document: string = await request.json();

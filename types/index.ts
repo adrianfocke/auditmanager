@@ -18,12 +18,6 @@ export type DocxStringConversionResult = {
   }[];
 };
 export type Patches = Record<string, IPatch>;
-export type PatchParcel = {
-  entity: FileQuery['file']['entity'];
-  filename: string;
-  placeholders: Placeholders;
-  skeleton: Skeleton;
-};
 
 export interface PatchableEntity {
   placeholderTinaField: (
@@ -68,3 +62,8 @@ export interface PickerTypeSettings {
   variables: TinaBackendParcel['variables'];
   variant: 'SingleValue' | 'MultiValue';
 }
+
+export type PatchBackendParcel = {
+  file: FileQuery;
+  placeholders: Placeholders;
+};

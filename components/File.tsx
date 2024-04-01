@@ -1,10 +1,10 @@
 'use client';
 import { usePatchDocument } from '@/app/api/document/patch/hook';
+import { FileQuery } from '@/tina/__generated__/types';
 import patchableEntityMapper from '@/tina/patchable-entity/patchableEntityMapper';
 import type { Placeholders } from '@/types/index';
 import { uniqueUuid } from 'docx';
 import { useTina } from 'tinacms/dist/react';
-import { FileQuery } from '../tina/__generated__/types';
 import EditorPanel from './EditorPanel';
 import { renderView } from './View';
 

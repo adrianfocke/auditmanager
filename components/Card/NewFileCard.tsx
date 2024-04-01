@@ -1,11 +1,10 @@
 'use client';
+import { LETTERS_NUMBERS_HYPEN_BLANK_REGEX } from '@/utils/constants';
 import { AccessibleIcon } from '@radix-ui/react-accessible-icon';
 import * as Form from '@radix-ui/react-form';
 import { FilePlusIcon } from '@radix-ui/react-icons';
 import { Button, Card, Flex, Text } from '@radix-ui/themes';
-import { revalidatePath } from 'next/cache';
 import { useRouter } from 'next/navigation';
-import { LETTERS_NUMBERS_HYPEN_BLANK_REGEX } from '../../utils/constants';
 
 /** Card component that includes a form to create new files */
 export default () => {

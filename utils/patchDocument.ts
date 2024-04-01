@@ -26,7 +26,7 @@ export default async (patchParcel: PatchBackendParcel) => {
       patches,
     }).then((patch) => patch);
 
-    console.log('Development: ', isDevelopment());
+    console.info('Development: ', isDevelopment());
 
     return isDevelopment()
       ? patchLocalDocument(patch, name)

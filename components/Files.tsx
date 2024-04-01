@@ -1,8 +1,8 @@
 'use client';
 import type { FileLinkInfo } from '@/types/index';
+import { fileInEditMode } from '@/utils/path';
 import { Grid, Link } from '@radix-ui/themes';
 import { uniqueUuid } from 'docx';
-import { fileInEditMode } from '../utils/path';
 import ContextCard from './Card/ContextCard';
 import NewFileCard from './Card/NewFileCard';
 

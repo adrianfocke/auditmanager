@@ -1,11 +1,10 @@
-import React from 'react';
 import { Collection } from 'tinacms';
-import { DURATIONS, LOCATIONS, TIMES } from '../../../utils/constants/tina';
+import { DURATIONS, LOCATIONS, TIMES } from '../../utils/constants';
 import {
   readableDateFromDatetime,
   readableFileNameFromEntity,
-} from '../../../utils/readables';
-import Picker from '../../picker/Picker';
+} from '../../utils/readables';
+import Picker from '../picker/Picker';
 
 export default {
   name: 'audit',

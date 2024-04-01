@@ -1,6 +1,6 @@
 import Files from '@/components/Files';
+import client from '@/tina/__generated__/client';
 import type { FileLinkInfo } from '@/types/index';
-import client from '../../tina/__generated__/client';
 
 export default async function Page() {
   const result = await client.queries.fileConnection();

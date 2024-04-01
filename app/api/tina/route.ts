@@ -1,6 +1,6 @@
+import client from '@/tina/__generated__/client';
 import type { TinaBackendParcel } from '@/types/index';
 import { NextResponse } from 'next/server';
-import client from '../../../tina/__generated__/client';
 
 export async function POST(request: Request) {
   const tinaBackendParcel: TinaBackendParcel = await request.json();

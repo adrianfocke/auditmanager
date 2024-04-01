@@ -16,12 +16,11 @@ npm run dev
 Prepare the project for a deployment (with Vercel). Just add some environment variables:
 
 ```
-NEXT_PUBLIC_TINA_URL=http://localhost:4001/graphql (or in production the tinacms url)
-NEXT_PUBLIC_TINA_TOKEN=<your value here>
+TINA_TOKEN=<your value here>
 NEXT_PUBLIC_TINA_CLIENT_ID=<your value here>
 
-NEXT_PUBLIC_SUPABASE_URL=<your value here>
-NEXT_PUBLIC_SUPABASE_KEY=<your value here>
+SUPABASE_URL=<your value here>
+SUPABASE_KEY=<your value here>
 ```
 
 More info here: [Going to Production with Tina Cloud](https://tina.io/docs/tina-cloud/overview/) and [Supabase Storage Quickstart](https://supabase.com/docs/guides/storage/quickstart)

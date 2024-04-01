@@ -29,7 +29,7 @@ export const createHtmlStringFromDocx = async (skeleton: Skeleton) => {
     });
     return result.value;
   } catch (error) {
-    console.error('Error in createHtmlStringFromDocx: ', error);
+    console.error(error);
   }
 };
 

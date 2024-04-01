@@ -1,9 +1,9 @@
+import File from '@/components/File';
+import client from '@/tina/__generated__/client';
 import type { Skeleton } from '@/types/index';
+import extractPlaceholders from '@/utils/extractPlaceholders';
 import { Text } from '@radix-ui/themes';
 import { Suspense } from 'react';
-import File from '../../../components/File';
-import client from '../../../tina/__generated__/client';
-import extractPlaceholders from '../../../utils/extractPlaceholders';
 
 export type Params = {
   params: {
@@ -24,7 +24,9 @@ export default async function Page({ params }: Params) {
 
   return (
     <Suspense fallback={<Text>Loading...</Text>}>
-      <File placeholders={placeholders} result={result} />
+      {result && placeholders && (
+        <File placeholders={placeholders} result={result} />
+      )}
     </Suspense>
   );
 }

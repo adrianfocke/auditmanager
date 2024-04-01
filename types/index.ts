@@ -1,15 +1,9 @@
+import type client from '@/tina/__generated__/client';
+import { FileQuery } from '@/tina/__generated__/types';
 import type { IPatch } from 'docx';
-import { FileQuery } from 'tina/__generated__/types';
-import type client from '../tina/__generated__/client';
 
 export type Skeleton = `/uploads/skeletons/${string}.docx`;
 export type Placeholders = `{{field_${string}}}`[];
-
-/** Entity-bound placeholder to value relation */
-export type PlaceholderRecord<T extends string | number | symbol> = Record<
-  T,
-  any
->;
 
 export type FileLinkInfo = {
   link: string;
@@ -24,12 +18,6 @@ export type DocxStringConversionResult = {
   }[];
 };
 export type Patches = Record<string, IPatch>;
-export type PatchParcel = {
-  entity: FileQuery['file']['entity'];
-  filename: string;
-  placeholders: Placeholders;
-  skeleton: Skeleton;
-};
 
 export interface PatchableEntity {
   placeholderTinaField: (
@@ -74,3 +62,8 @@ export interface PickerTypeSettings {
   variables: TinaBackendParcel['variables'];
   variant: 'SingleValue' | 'MultiValue';
 }
+
+export type PatchBackendParcel = {
+  file: FileQuery;
+  placeholders: Placeholders;
+};

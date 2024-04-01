@@ -1,4 +1,3 @@
-import { isDevelopment } from '@/utils/constants';
 import { DownloadIcon, ListBulletIcon } from '@radix-ui/react-icons';
 import { Button, Card, Flex } from '@radix-ui/themes';
 import { useRouter } from 'next/navigation';
@@ -41,7 +40,7 @@ export default ({ patchedDocument }: EditorPanelProps) => {
           className='bg-[#0c6bff]'
           title={`Download file ${patchedDocument}`}
           onClick={async () => {
-            if (isDevelopment()) {
+            if (window.location.hostname === 'localhost') {
               router.push(`/${patchedDocument}`);
               return;
             }

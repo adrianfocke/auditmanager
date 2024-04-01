@@ -1,6 +1,6 @@
+import type client from '@/tina/__generated__/client';
+import { FileQuery } from '@/tina/__generated__/types';
 import type { IPatch } from 'docx';
-import { FileQuery } from 'tina/__generated__/types';
-import type client from '../tina/__generated__/client';
 
 export type Skeleton = `/uploads/skeletons/${string}.docx`;
 export type Placeholders = `{{field_${string}}}`[];

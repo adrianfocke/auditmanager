@@ -6,7 +6,7 @@ import { patchDocument } from 'docx';
 import { readFileSync, writeFileSync } from 'fs';
 import path from 'path';
 import type { PatchBackendParcel } from '../app/api/document/patch/route';
-import { IS_RUNNING_LOCALLY } from './constants';
+import { isDevelopment } from './constants';
 import { staticFilePath } from './path';
 
 export default async (patchParcel: PatchBackendParcel) => {
@@ -26,7 +26,7 @@ export default async (patchParcel: PatchBackendParcel) => {
       patches,
     }).then((patch) => patch);
 
-    return IS_RUNNING_LOCALLY
+    return isDevelopment()
       ? patchLocalDocument(patch, name)
       : await patchProductionDocument(patch, name);
   } catch (error) {

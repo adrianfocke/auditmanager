@@ -2,8 +2,10 @@
 export const PLACEHOLDER_REGEX = /{{field_[a-zA-Z0-9]+(?:_[a-zA-Z0-9]+)*}}/g;
 export const LETTERS_NUMBERS_HYPEN_BLANK_REGEX = /^[a-zA-Z0-9-\s]+$/;
 
-export const IS_RUNNING_LOCALLY =
-  !!process && process.env.NODE_ENV === 'development';
+export const isDevelopment = () =>
+  window.location.hostname === 'localhost' ||
+  window.location.hostname === '127.0.0.1' ||
+  window.location.hostname.startsWith('192.168.');
 
 // TODO get rid of this
 export const LOCATIONS = [

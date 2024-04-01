@@ -5,8 +5,6 @@ import { NextResponse } from 'next/server';
 export async function POST(request: Request) {
   const patchBackendParcel: PatchBackendParcel = await request.json();
 
-  console.info('Bakend patch parcel: ', patchBackendParcel);
-
   const patch = await patchDocument(patchBackendParcel);
 
   if (!patch) {

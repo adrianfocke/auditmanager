@@ -33,3 +33,7 @@ Please consider a donation! Besides NextJS, this project leverages the following
 - [docxjs](https://github.com/dolanmiu/docx) Patching .docx files
 - [mammoth](https://github.com/mwilliamson/mammoth.js): Converting .docx files to html
 - [t3env](https://github.com/t3-oss/t3-env): For env checking
+
+## FYI
+
+If you want production tests to succeed, you have to disable Vercel's deployment protection. More info [here](https://github.com/patrickedqvist/wait-for-vercel-preview/issues/62). This shall be considered a temporary fix.

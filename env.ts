@@ -17,7 +17,8 @@ export const env = createEnv({
     SUPABASE_URL: process.env.SUPABASE_URL,
     TINA_TOKEN: process.env.TINA_TOKEN,
   },
-  skipValidation: process.env.NODE_ENV === 'development',
+  // TODO figure out how to access env variables on preview builds
+  skipValidation: true,
   onValidationError: (error: ZodError) => {
     console.info(
       'To use this application in production and handle environment variables, check out https://tina.io/docs/tina-cloud/overview/ and https://supabase.com/docs/guides/storage/quickstart for more info!'

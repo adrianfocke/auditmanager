@@ -38,7 +38,10 @@ export default {
       name: 'language',
       label: 'Language',
       type: 'string',
-      options: ['de', 'en'],
+      options: ['deu', 'eng'],
+      ui: {
+        defaultValue: 'deu',
+      },
     },
   ],
 } as Collection;

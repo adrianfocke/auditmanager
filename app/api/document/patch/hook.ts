@@ -11,8 +11,17 @@ const fetcher = async (...args: any[]) => {
 
 export const usePatchDocument = (
   file: PatchBackendParcel['file'],
-  placeholders: PatchBackendParcel['placeholders']
+  placeholders?: PatchBackendParcel['placeholders']
 ) => {
+  if (!placeholders) {
+    return {
+      document: null,
+      isLoading: false,
+      error: 'No placeholders given',
+    };
+  }
+
+  // eslint-disable-next-line
   const { data, error, isLoading } = useSWR({ file, placeholders }, fetcher);
 
   return {

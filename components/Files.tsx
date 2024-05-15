@@ -1,5 +1,5 @@
 'use client';
-import type { FileLinkInfo } from '@/types/index';
+import type { File } from '@/tina/__generated__/types';
 import { fileInEditMode } from '@/utils/path';
 import { Grid, Link } from '@radix-ui/themes';
 import { uniqueUuid } from 'docx';
@@ -7,7 +7,7 @@ import ContextCard from './Card/ContextCard';
 import NewFileCard from './Card/NewFileCard';
 
 type FilesProps = {
-  files: FileLinkInfo[];
+  files: File[];
 };
 
 export default ({ files }: FilesProps) => {
@@ -15,19 +15,16 @@ export default ({ files }: FilesProps) => {
     <Grid columns='3' gap='3'>
       <NewFileCard />
 
-      {files.map((item, i) => (
+      {files.map((file) => (
         <Link
-          className={item.name === 'test' ? 'hidden' : ''}
-          title={`Go to file ${item.name}`}
+          className={file.name === 'test' ? 'hidden' : ''}
+          title={`Go to file ${file.name}`}
           style={{ textDecoration: 'none' }}
-          data-testid={`${item.name}`}
-          href={fileInEditMode(item.link)}
+          data-testid={`${file.name}`}
+          href={fileInEditMode(file._sys.filename)}
           key={uniqueUuid()}
         >
-          <ContextCard
-            text={item.name ?? item.link}
-            href={fileInEditMode(item.link)}
-          />
+          <ContextCard file={file} />
         </Link>
       ))}
     </Grid>

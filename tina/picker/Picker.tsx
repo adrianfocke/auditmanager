@@ -3,6 +3,7 @@ import * as Checkbox from '@radix-ui/react-checkbox';
 import { CheckIcon } from '@radix-ui/react-icons';
 import { Card, Text } from '@radix-ui/themes';
 import { uniqueUuid } from 'docx';
+import React from 'react';
 import { wrapFieldsWithMeta } from 'tinacms';
 import { useTinaQuery } from '../../app/api/tina/hook';
 import pickerMapper from './pickerMapper';

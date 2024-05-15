@@ -13,3 +13,13 @@ mutation deleteFile($relativePath: String!) {
     __typename
   }
 }
+
+mutation duplicateFile($relativePath: String!, $params: DocumentMutation!) {
+  createDocument(
+    collection: "file"
+    relativePath: $relativePath
+    params: $params
+  ) {
+    __typename
+  }
+}

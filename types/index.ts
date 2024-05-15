@@ -5,11 +5,6 @@ import type { IPatch } from 'docx';
 export type Skeleton = `/uploads/skeletons/${string}.docx`;
 export type Placeholders = `{{field_${string}}}`[];
 
-export type FileLinkInfo = {
-  link: string;
-  name: string;
-};
-
 export type DocxStringConversionResult = {
   value: string;
   messages: {

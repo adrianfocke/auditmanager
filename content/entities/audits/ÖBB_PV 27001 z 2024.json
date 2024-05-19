@@ -46,8 +46,26 @@
             "ISO-27001-ABC4.1 – Anderer (unwichtiger) Unterpunkt"
           ],
           "duration": "00:30",
-          "partners": ["Johnny Partnerman", "Gerald Färber"],
-          "auditors": ["Adrianus Bertus", "Christian Focke-Kiss"]
+          "partners": [
+            "Johnny Partnerman",
+            "Gerald Färber"
+          ],
+          "auditors": [
+            "Adrianus Bertus",
+            "Christian Focke-Kiss"
+          ],
+          "questions": [
+            {
+              "questionsReference": "content/entities/standards/ISO-IEC 27001:2022.json",
+              "questionsItem": "4.0 Unterpunkt",
+              "samples": [
+                {}
+              ],
+              "findings": [
+                {}
+              ]
+            }
+          ]
         },
         {
           "reusableContext": "Strategic planning",

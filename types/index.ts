@@ -50,11 +50,14 @@ export type PickerType =
   | 'All Partners'
   | 'Audit Context'
   | 'Audit Type'
-  | 'Audit Type Relation';
+  | 'Audit Type Relation'
+  | 'Standard Section';
 export interface PickerTypeSettings {
   display: (data: any) => any;
   query: TinaBackendParcel['query'];
-  variables: TinaBackendParcel['variables'];
+  variables: (
+    data?: string
+  ) => { relativePath: string } | Record<string, never>;
   variant: 'SingleValue' | 'MultiValue';
 }
 

@@ -175,109 +175,103 @@ export default {
               ],
             },
             {
-              name: 'samples',
-              label: 'Samples',
+              name: 'questions',
+              label: 'Questions',
               type: 'object',
               list: true,
               ui: {
                 itemProps: (item) => {
                   return {
-                    label: `${item.description}`,
+                    label: `${item.questionsItem ?? 'New question'}`,
                   };
                 },
               },
               fields: [
-                { name: 'time', label: 'Time', type: 'datetime' },
+                // TODO standardize this sub-value picker (Reference-Item) pattern into component
                 {
-                  name: 'description',
-                  label: 'Sample description',
-                  type: 'string',
+                  name: 'questionsReference',
+                  label: 'Linked standard',
+                  type: 'reference',
+                  collections: ['standard'],
                 },
                 {
-                  name: 'memo',
-                  label: 'Memo',
+                  name: 'questionsItem',
+                  label: ' ' /* will be added later, based on picker type */,
                   type: 'string',
                   ui: {
-                    component: 'textarea',
+                    component: Picker('Standard Section'),
                   },
                 },
+                // standardize ... end
                 {
-                  name: 'comments',
-                  label: 'Comments',
+                  name: 'samples',
+                  label: 'Samples',
                   type: 'object',
                   list: true,
                   ui: {
                     itemProps: (item) => {
                       return {
-                        label: `${item.person}`,
+                        label: `${item.samplesInfo ?? 'New sample'}`,
                       };
                     },
                   },
                   fields: [
                     {
-                      name: 'person',
-                      label: 'Person',
-                      type: 'reference',
-                      collections: ['person'],
-                    },
-                    {
-                      name: 'commment',
-                      label: 'Comment',
+                      name: 'samplesInfo',
+                      label: 'Info (Bezeichnung)',
                       type: 'string',
-                      ui: {
-                        description: "The partner's memo",
-                        component: 'textarea',
-                      },
                     },
-                  ],
-                },
-                {
-                  name: 'learnings',
-                  label: 'Learnings',
-                  type: 'object',
-                  list: true,
-                  ui: {
-                    itemProps: (item) => {
-                      return {
-                        label: `${item.learning ? item.learning : ''} (${
-                          item.classification ? item.classification[0] : ''
-                        })`,
-                      };
-                    },
-                  },
-                  fields: [
                     {
-                      name: 'learning',
-                      label: 'Learning',
+                      name: 'samplesVersion',
+                      label: 'Version',
                       type: 'string',
-                      ui: {
-                        component: 'textarea',
-                      },
                     },
                     {
-                      name: 'classification',
+                      name: 'samplesDateUntil',
+                      label: 'Date until',
+                      type: 'datetime',
+                    },
+                    {
+                      name: 'samplesDateFrom',
+                      label: 'Date from',
+                      type: 'datetime',
+                    },
+                    {
+                      name: 'samplesClassification',
                       label: 'Classification',
                       type: 'string',
-                      options: [
-                        '1 – Vollständige Übereinstimmung',
-                        '2 – Möglichkeit zur Verbesserung',
-                        '3 - Untergeordnete Nichtkonformität: Die Wirksamkeit der Korrekturmaßnahme wird beim nächsten Audit bewertet',
-                        '4: Wesentliche Nichtkonformität: Korrektur durch Einreichung von Dokumenten',
-                        '5 – Wesentliche Nichtkonformität: Korrektur durch Re-Audit',
-                        'NA – Nicht anwendbar oder/und ausgeschlossen',
-                      ],
+                    },
+                    {
+                      name: 'samplesFiling',
+                      label: 'Filing (Ablage)',
+                      type: 'string',
+                    },
+                    {
+                      name: 'samplesMemo',
+                      label: 'Memo',
+                      type: 'string',
                     },
                   ],
                 },
                 {
-                  name: 'version',
-                  label: 'Version',
-                  type: 'string',
-                },
-                {
-                  name: 'context',
-                  label: 'Context/Ablage',
-                  type: 'string',
+                  name: 'findings',
+                  label: 'Findings',
+                  type: 'object',
+                  list: true,
+                  ui: {
+                    itemProps: (item) => {
+                      return {
+                        label: `${item.findingsInfo ?? 'New question'}`,
+                      };
+                    },
+                  },
+                  fields: [
+                    {
+                      name: 'findingsInfo',
+                      label: 'Finding',
+                      type: 'string',
+                    },
+                  ],
                 },
               ],
             },

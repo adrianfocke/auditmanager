@@ -3,8 +3,10 @@ import type { PickerTypeSettings } from '@/types/index';
 
 export default {
   query: 'constant',
-  variables: {
-    relativePath: 'Constants.json',
+  variables: () => {
+    return {
+      relativePath: 'Constants.json',
+    };
   },
   variant: 'SingleValue',
   display: (data: { data: ConstantQuery }) =>

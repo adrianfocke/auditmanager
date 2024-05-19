@@ -3,7 +3,7 @@ import type { PickerTypeSettings } from '@/types/index';
 
 export default {
   query: 'personConnection',
-  variables: {},
+  variables: () => {},
   variant: 'MultiValue',
   display: (data: { data: PersonConnectionQuery }) =>
     data.data.personConnection.edges

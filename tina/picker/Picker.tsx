@@ -8,13 +8,15 @@ import { wrapFieldsWithMeta } from 'tinacms';
 import { useTinaQuery } from '../../app/api/tina/hook';
 import pickerMapper from './pickerMapper';
 
-// TODO also use directly in audit
-
 export default (pickerType: PickerType) =>
   wrapFieldsWithMeta((props) => {
+    const reference: string | undefined = props.form.getFieldState(
+      props.input.name.replace('Item', 'Reference')
+    )?.initial;
+
     const { data, error, isLoading } = useTinaQuery(
       pickerMapper[pickerType].query,
-      pickerMapper[pickerType].variables
+      pickerMapper[pickerType].variables(reference)
     );
 
     if (error) return <p>Error displaying picker</p>;

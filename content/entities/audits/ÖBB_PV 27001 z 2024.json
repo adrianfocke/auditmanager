@@ -56,7 +56,14 @@
           ],
           "questions": [
             {
-              "questionsReference": "content/entities/standards/ISO-IEC 27001:2022.json"
+              "questionsReference": "content/entities/standards/ISO-IEC 27001:2022.json",
+              "questionsItem": "4.0 Unterpunkt",
+              "samples": [
+                {}
+              ],
+              "findings": [
+                {}
+              ]
             }
           ]
         },

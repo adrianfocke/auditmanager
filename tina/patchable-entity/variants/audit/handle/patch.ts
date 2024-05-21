@@ -1,10 +1,10 @@
 import type { ViewType } from '@/types/index';
+import { StyledTextRun } from '@/utils/styledComponents';
 import {
   Paragraph,
   Table,
   TableCell,
   TableRow,
-  TextRun,
   WidthType,
   type IPatch,
 } from 'docx';
@@ -19,7 +19,10 @@ export const retrievePatchInstruction = (
 
   switch (viewType) {
     case 'TEXT':
-      return { type: 'paragraph', children: [new TextRun(value as string)] };
+      return {
+        type: 'paragraph',
+        children: [StyledTextRun(value as string)],
+      };
     case 'LIST':
       return {
         type: 'file',
@@ -27,7 +30,7 @@ export const retrievePatchInstruction = (
           ...(value as string[]).map(
             (text) =>
               new Paragraph({
-                text,
+                children: [StyledTextRun(text)],
               })
           ),
         ],
@@ -39,20 +42,12 @@ export const retrievePatchInstruction = (
             ? (text as []).map(
                 (text, i) =>
                   new Paragraph({
-                    children: [
-                      new TextRun({
-                        text,
-                      }),
-                    ],
+                    children: [StyledTextRun(text)],
                   })
               )
             : [
                 new Paragraph({
-                  children: [
-                    new TextRun({
-                      text,
-                    }),
-                  ],
+                  children: [StyledTextRun(text)],
                 }),
               ];
 

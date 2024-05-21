@@ -1,4 +1,5 @@
 'use client';
+import styles from '@/styles';
 import { LETTERS_NUMBERS_HYPEN_BLANK_REGEX } from '@/utils/constants';
 import { AccessibleIcon } from '@radix-ui/react-accessible-icon';
 import * as Form from '@radix-ui/react-form';
@@ -16,7 +17,7 @@ export default () => {
         <AccessibleIcon label='Create new file cta icon'>
           <FilePlusIcon className='text-tina-blue' width={24} height={24} />
         </AccessibleIcon>
-        <Text className='text-tina-blue select-none'>New File</Text>
+        <Text className={`${styles.text.className}`}>New File</Text>
       </Flex>
       <Form.Root
         onSubmit={async (event) => {

@@ -1,3 +1,4 @@
+import styles from '@/styles';
 import type { View } from '@/types/index';
 import { TriangleRightIcon } from '@radix-ui/react-icons';
 import { Card, Flex, Text } from '@radix-ui/themes';
@@ -16,7 +17,9 @@ export default (props: View) => {
             listItem && (
               <Flex key={uniqueUuid()} align={'center'}>
                 <TriangleRightIcon />
-                <Text key={uniqueUuid()}>{listItem}</Text>
+                <Text className={`${styles.text.className}`} key={uniqueUuid()}>
+                  {listItem}
+                </Text>
               </Flex>
             )
         )}
@@ -24,5 +27,3 @@ export default (props: View) => {
     </Card>
   );
 };
-
-

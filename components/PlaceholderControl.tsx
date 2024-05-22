@@ -1,3 +1,4 @@
+import styles from '@/styles';
 import { Pencil2Icon } from '@radix-ui/react-icons';
 import { Button, Flex, Text } from '@radix-ui/themes';
 
@@ -8,7 +9,7 @@ type PlaceholderControlProps = {
 
 export default ({ placeholder, tinaField }: PlaceholderControlProps) => (
   <Flex align={'center'} justify={'between'} className='mb-2'>
-    <Text color='gray' as='div' size={'1'}>
+    <Text className={`${styles.text.className}`} as='div' size={'1'}>
       {placeholder.replace('field_', '').replaceAll('_', ' ')}
     </Text>
     {tinaField && (

@@ -1,4 +1,5 @@
 import File from '@/components/File';
+import styles from '@/styles';
 import client from '@/tina/__generated__/client';
 import type { Skeleton } from '@/types/index';
 import extractPlaceholders from '@/utils/extractPlaceholders';
@@ -23,7 +24,9 @@ export default async function Page({ params }: Params) {
   const placeholders = await extractPlaceholders(skeleton as Skeleton);
 
   return (
-    <Suspense fallback={<Text>Loading...</Text>}>
+    <Suspense
+      fallback={<Text className={`${styles.text.className}`}>Loading...</Text>}
+    >
       <File placeholders={placeholders} result={result} />
     </Suspense>
   );

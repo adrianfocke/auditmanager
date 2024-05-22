@@ -65,3 +65,5 @@ export type PatchBackendParcel = {
   file: FileQuery;
   placeholders: Placeholders;
 };
+
+export type Styles = Record<string, { className: string; docxStyles?: Object }>;

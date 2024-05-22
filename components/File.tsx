@@ -1,14 +1,11 @@
 'use client';
 import { usePatchDocument } from '@/app/api/document/patch/hook';
 import { FileQuery } from '@/tina/__generated__/types';
-import patchableEntityMapper from '@/tina/patchable-entity/patchableEntityMapper';
 import type { Placeholders } from '@/types/index';
-import { InfoCircledIcon } from '@radix-ui/react-icons';
-import { Callout } from '@radix-ui/themes';
-import { uniqueUuid } from 'docx';
-import { tinaField, useTina } from 'tinacms/dist/react';
+import { useEffect, useState } from 'react';
+import { useTina } from 'tinacms/dist/react';
 import EditorPanel from './EditorPanel';
-import { renderView } from './View';
+import Preview from './Preview';
 
 type FileProps = {
   placeholders?: Placeholders;
@@ -19,47 +16,38 @@ type FileProps = {
     };
     query: string;
   };
-  skeletonLanguage?: string;
 };
 
-export default ({ placeholders, result, skeletonLanguage }: FileProps) => {
+export default ({ placeholders, result }: FileProps) => {
   const { data } = useTina(result);
   const { document } = usePatchDocument(data, placeholders);
-  const givenEntity = patchableEntityMapper[data.file.entity?.__typename!];
+  const [previewDocument, setPreviewDocument] = useState<Blob | null>(null);
+
+  useEffect(() => {
+    if (document && document.data) {
+      const url = `/${document.data}`;
+
+      fetch(url)
+        .then((response) => {
+          if (!response.ok) {
+            throw new Error(`HTTP error! status: ${response.status}`);
+          }
+          return response.arrayBuffer();
+        })
+        .then((arrayBuffer) => {
+          const blob = new Blob([arrayBuffer], {
+            type: 'application/vnd.openxmlformats-officedocument.wordprocessingml.document',
+          });
+          setPreviewDocument(blob);
+        })
+        .catch((error) => console.error('Error fetching DOCX file:', error));
+    }
+  }, [document]);
 
   return (
     <>
-      {data.file.language !== skeletonLanguage && (
-        <Callout.Root className='mb-4'>
-          <Callout.Icon>
-            <InfoCircledIcon />
-          </Callout.Icon>
-          <Callout.Text>
-            You have a mismatch in your skeleton and display language. Maybe
-            check your{' '}
-            <span data-tina-field={tinaField(data.file, 'skeleton')}>
-              skeleton
-            </span>{' '}
-            or{' '}
-            <span data-tina-field={tinaField(data.file, 'language')}>
-              language
-            </span>{' '}
-            setting!
-          </Callout.Text>
-        </Callout.Root>
-      )}
       <EditorPanel patchedDocument={(document && document.data) || undefined} />
-      {givenEntity &&
-        placeholders?.map((placeholder) => (
-          <div key={uniqueUuid()} className='mb-4'>
-            {renderView({
-              placeholder,
-              tinaField: givenEntity.placeholderTinaField(data, placeholder),
-              value: givenEntity.placeholderValue(data, placeholder),
-              viewType: givenEntity.placeholderValueType(placeholder),
-            })}
-          </div>
-        ))}
+      {previewDocument && <Preview previewDocument={previewDocument} />}
     </>
   );
 };

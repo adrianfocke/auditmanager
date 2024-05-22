@@ -10,12 +10,15 @@ export default ({ patchedDocument }: EditorPanelProps) => {
   const router = useRouter();
 
   return (
-    <Card className='mb-2 w-max mb-8 sticky top-6 z-10 bg-white'>
+    <div
+      className='w-full mb-8 sticky top-0 z-10 bg-tina-grey p-6'
+      style={{ borderBottom: '1px solid lightgrey' }}
+    >
       <Flex gap={'2'} align={'center'}>
         <Button
           // TODO how to go to /files with tina edit mode disabled?
           onClick={() => router.back()}
-          className='bg-[#0c6bff]'
+          className='bg-[#0c6bff] cursor-pointer'
           title={`Go to all files`}
         >
           <ListBulletIcon width='16' height='16' />
@@ -23,8 +26,9 @@ export default ({ patchedDocument }: EditorPanelProps) => {
         </Button>
 
         <Button
-          disabled={!patchedDocument}
-          className='bg-[#0c6bff]'
+          className={`bg-[#0c6bff] ${
+            patchedDocument ? 'cursor-pointer' : 'cursor-not-allowed'
+          }`}
           title={`Download file ${patchedDocument}`}
           onClick={async () => {
             if (window.location.hostname === 'localhost') {
@@ -59,6 +63,6 @@ export default ({ patchedDocument }: EditorPanelProps) => {
           Download
         </Button>
       </Flex>
-    </Card>
+    </div>
   );
 };

@@ -1,7 +1,6 @@
 import File from '@/components/File';
 import client from '@/tina/__generated__/client';
 import type { Skeleton } from '@/types/index';
-import extractLanguage from '@/utils/extractLanguage';
 import extractPlaceholders from '@/utils/extractPlaceholders';
 import { Text } from '@radix-ui/themes';
 import { Suspense } from 'react';
@@ -22,15 +21,10 @@ export default async function Page({ params }: Params) {
   });
   const { skeleton } = result.data.file;
   const placeholders = await extractPlaceholders(skeleton as Skeleton);
-  const skeletonLanguage = await extractLanguage(skeleton as Skeleton);
 
   return (
     <Suspense fallback={<Text>Loading...</Text>}>
-      <File
-        placeholders={placeholders}
-        result={result}
-        skeletonLanguage={skeletonLanguage}
-      />
+      <File placeholders={placeholders} result={result} />
     </Suspense>
   );
 }

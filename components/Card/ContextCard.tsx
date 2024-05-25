@@ -1,4 +1,4 @@
-import styles from '@/styles';
+import { tailwindStyles } from '@/styles';
 import client from '@/tina/__generated__/client';
 import type { File } from '@/tina/__generated__/types';
 import * as ContextMenu from '@radix-ui/react-context-menu';
@@ -26,17 +26,15 @@ export default ({ file }: ContextCardProps) => {
             <AccessibleIcon label='File link icon'>
               <FileIcon className='text-tina-blue' width={24} height={24} />
             </AccessibleIcon>
-            <Text className={`${styles.text.className}`}>File</Text>
+            <Text className={`${tailwindStyles.text}`}>File</Text>
           </Flex>
-          <Text className={`${styles.text.className}`}>{file.name}</Text>
+          <Text className={`${tailwindStyles.text}`}>{file.name}</Text>
         </Card>
       </ContextMenu.Trigger>
       <ContextMenu.Portal>
         <ContextMenu.Content className='w-48 px-2 py-2 text-sm border bg-white rounded-md overflow-hidden shadow-xl'>
           <ContextMenu.Label>
-            <Text className={`${styles.text.className}`}>
-              File Actions (WIP)
-            </Text>
+            <Text className={`${tailwindStyles.text}`}>File Actions (WIP)</Text>
           </ContextMenu.Label>
           <ContextMenu.Item className='text-gray-500 w-full hover:bg-blue-500 px-1 py-1 rounded-md hover:text-white hover:cursor-pointer'>
             Open

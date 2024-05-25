@@ -1,5 +1,5 @@
 import File from '@/components/File';
-import styles from '@/styles';
+import { tailwindStyles } from '@/styles';
 import client from '@/tina/__generated__/client';
 import type { Skeleton } from '@/types/index';
 import extractPlaceholders from '@/utils/extractPlaceholders';
@@ -25,7 +25,7 @@ export default async function Page({ params }: Params) {
 
   return (
     <Suspense
-      fallback={<Text className={`${styles.text.className}`}>Loading...</Text>}
+      fallback={<Text className={`${tailwindStyles.text}`}>Loading...</Text>}
     >
       <File placeholders={placeholders} result={result} />
     </Suspense>

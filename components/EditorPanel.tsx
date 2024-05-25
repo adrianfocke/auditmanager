@@ -1,5 +1,5 @@
 import { DownloadIcon, ListBulletIcon } from '@radix-ui/react-icons';
-import { Button, Card, Flex } from '@radix-ui/themes';
+import { Button, Flex } from '@radix-ui/themes';
 import { useRouter } from 'next/navigation';
 
 type EditorPanelProps = {

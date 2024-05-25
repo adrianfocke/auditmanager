@@ -1,10 +1,10 @@
-import styles from '@/styles';
+import { docxStyles } from '@/styles';
 import { TextRun } from 'docx';
 
 export const StyledTextRun = (text: string) =>
   new TextRun({
     text,
-    ...styles.text.docxStyles,
+    ...docxStyles.text,
   });
 
 /** hacky way to help tina to add tina fields in the preview */

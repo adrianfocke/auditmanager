@@ -34,14 +34,5 @@ export default {
         description: 'The empty .docx file to be filled',
       },
     },
-    {
-      name: 'language',
-      label: 'Language',
-      type: 'string',
-      options: ['deu', 'eng'],
-      ui: {
-        defaultValue: 'deu',
-      },
-    },
   ],
 } as Collection;

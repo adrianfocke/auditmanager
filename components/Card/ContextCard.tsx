@@ -64,7 +64,6 @@ export default ({ file }: ContextCardProps) => {
                       entity:
                         'content/entities/audits/ÖBB_PV 27001 z 2024.json',
                       skeleton: file.skeleton,
-                      language: file.language,
                     },
                   },
                 })

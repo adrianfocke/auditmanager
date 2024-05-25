@@ -31,12 +31,6 @@ export interface PatchableEntity {
 }
 
 export type ViewType = 'LIST' | 'NONE' | 'TABLE' | 'TEXT';
-export type View = {
-  placeholder: string;
-  tinaField: string | undefined;
-  value: string | string[] | undefined;
-  viewType: ViewType | undefined;
-};
 
 export type Time = `${number}:${number}`;
 

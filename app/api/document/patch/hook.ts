@@ -25,7 +25,7 @@ export const usePatchDocument = (
   const { data, error, isLoading } = useSWR({ file, placeholders }, fetcher);
 
   return {
-    document: data,
+    doc: data,
     isLoading,
     error,
   };

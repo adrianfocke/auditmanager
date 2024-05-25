@@ -20,12 +20,12 @@ type FileProps = {
 
 export default ({ placeholders, result }: FileProps) => {
   const { data } = useTina(result);
-  const { document } = usePatchDocument(data, placeholders);
-  const [previewDocument, setPreviewDocument] = useState<Blob | null>(null);
+  const { doc } = usePatchDocument(data, placeholders);
+  const [blobForPreview, setBlobForPreview] = useState<Blob | null>(null);
 
   useEffect(() => {
-    if (document && document.data) {
-      const url = `/${document.data}`;
+    if (doc && doc.data) {
+      const url = `/${doc.data}`;
 
       fetch(url)
         .then((response) => {
@@ -38,16 +38,16 @@ export default ({ placeholders, result }: FileProps) => {
           const blob = new Blob([arrayBuffer], {
             type: 'application/vnd.openxmlformats-officedocument.wordprocessingml.document',
           });
-          setPreviewDocument(blob);
+          setBlobForPreview(blob);
         })
         .catch((error) => console.error('Error fetching DOCX file:', error));
     }
-  }, [document]);
+  }, [doc]);
 
   return (
     <>
-      <EditorPanel patchedDocument={(document && document.data) || undefined} />
-      {previewDocument && <Preview previewDocument={previewDocument} />}
+      <EditorPanel patchedDocument={(doc && doc.data) || undefined} />
+      {blobForPreview && <Preview file={data} blob={blobForPreview} />}
     </>
   );
 };

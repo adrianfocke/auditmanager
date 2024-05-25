@@ -1,5 +1,5 @@
 import type { ViewType } from '@/types/index';
-import { StyledTextRun } from '@/utils/styledComponents';
+import { HiddenPreviewInfo, StyledTextRun } from '@/utils/styledComponents';
 import {
   Paragraph,
   Table,
@@ -9,10 +9,13 @@ import {
   type IPatch,
 } from 'docx';
 
-export const retrievePatchInstruction = (
-  value: string | string[] | undefined,
-  viewType: ViewType
-): IPatch => {
+export const retrievePatchInstruction = (hints: {
+  placeholder: string;
+  value: string | string[] | undefined;
+  viewType: ViewType;
+}): IPatch => {
+  const { placeholder, value, viewType } = hints;
+
   if (!value || !viewType) {
     return { type: 'paragraph', children: [] };
   }
@@ -21,7 +24,10 @@ export const retrievePatchInstruction = (
     case 'TEXT':
       return {
         type: 'paragraph',
-        children: [StyledTextRun(value as string)],
+        children: [
+          StyledTextRun(value as string),
+          HiddenPreviewInfo(placeholder),
+        ],
       };
     case 'LIST':
       return {
@@ -30,14 +36,14 @@ export const retrievePatchInstruction = (
           ...(value as string[]).map(
             (text) =>
               new Paragraph({
-                children: [StyledTextRun(text)],
+                children: [StyledTextRun(text), HiddenPreviewInfo(placeholder)],
               })
           ),
         ],
       };
     case 'TABLE':
       const rows = (value as []).map((row, i) => {
-        const cells = (row as []).map((text) => {
+        const cells = (row as []).map((text, i) => {
           const children = Array.isArray(text)
             ? (text as []).map(
                 (text, i) =>

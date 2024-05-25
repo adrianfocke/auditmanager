@@ -22,7 +22,11 @@ export default {
       const value = values(placeholder as AuditPlaceholder, data);
       const viewType = viewTypes(placeholder as AuditPlaceholder);
 
-      const patchInstruction = retrievePatchInstruction(value, viewType!);
+      const patchInstruction = retrievePatchInstruction({
+        placeholder,
+        value,
+        viewType,
+      });
 
       patches[placeholder] = patchInstruction;
     });

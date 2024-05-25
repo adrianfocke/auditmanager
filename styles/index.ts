@@ -1,4 +1,4 @@
-import type { IRunOptions } from 'docx';
+import { BorderStyle, type IRunOptions, type ITableCellOptions } from 'docx';
 
 export const tailwindStyles = {
   text: 'text-tina-blue',
@@ -10,4 +10,13 @@ export const docxStyles = {
     font: 'Arial',
     size: 20,
   } as IRunOptions,
+  tableCell: {
+    borders: {
+      top: {
+        style: BorderStyle.DOT_DOT_DASH,
+        size: 3,
+        color: 'ff8000',
+      },
+    },
+  } as ITableCellOptions,
 };

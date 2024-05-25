@@ -1,3 +1,4 @@
+import { docxStyles } from '@/styles';
 import type { ViewType } from '@/types/index';
 import { HiddenPreviewInfo, StyledTextRun } from '@/utils/styledComponents';
 import {
@@ -58,6 +59,7 @@ export const retrievePatchInstruction = (hints: {
               ];
 
           return new TableCell({
+            ...docxStyles.tableCell,
             children,
           });
         });

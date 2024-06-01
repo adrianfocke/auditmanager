@@ -5,18 +5,18 @@ import { renderAsync } from 'docx-preview';
 import { useEffect } from 'react';
 
 type PreviewProps = {
-  blob: Blob /* format used for rendering */;
   file: FileQuery;
+  patchedDocument: Blob /* format used for rendering */;
 };
 
-export default ({ blob, file }: PreviewProps) => {
+export default ({ file, patchedDocument }: PreviewProps) => {
   const givenEntity = patchableEntityMapper[file.file.entity?.__typename!];
 
   useEffect(() => {
     const container = document.getElementById('preview-container');
 
-    if (blob && container) {
-      renderAsync(blob, container, undefined, {
+    if (patchedDocument && container) {
+      renderAsync(patchedDocument, container, undefined, {
         inWrapper: false,
         renderChanges: true,
       })
@@ -38,7 +38,7 @@ export default ({ blob, file }: PreviewProps) => {
         })
         .catch((err) => console.error('docx: error', err));
     }
-  }, [blob, file, givenEntity]);
+  }, [patchedDocument, file, givenEntity]);
 
   return (
     <Flex

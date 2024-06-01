@@ -7,9 +7,17 @@ export async function POST(request: Request) {
 
   const patch = await patchDocument(patchBackendParcel);
 
-  if (!patch) {
-    return NextResponse.json({ error: 'Could not patch document' });
-  }
+  const buffer = Buffer.from(patch!);
 
-  return NextResponse.json({ data: patch }, { status: 200 });
+  const blob = new Blob([buffer], {
+    type: 'application/vnd.openxmlformats-officedocument.wordprocessingml.document',
+  });
+
+  return new Response(blob, {
+    status: 200,
+    headers: {
+      'Content-Type':
+        'application/vnd.openxmlformats-officedocument.wordprocessingml.document',
+    },
+  });
 }

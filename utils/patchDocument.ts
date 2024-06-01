@@ -24,9 +24,7 @@ export default async (patchParcel: PatchBackendParcel) => {
       patches,
     }).then((patch) => patch);
 
-    return process.env.NODE_ENV === 'development'
-      ? patchLocalDocument(patch, name)
-      : await patchProductionDocument(patch, name);
+    return patch;
   } catch (error) {
     console.error(error);
   }

@@ -1,12 +1,14 @@
+import downloadDocx from '@/utils/downloadDocx';
 import { DownloadIcon, ListBulletIcon } from '@radix-ui/react-icons';
 import { Button, Flex } from '@radix-ui/themes';
 import { useRouter } from 'next/navigation';
 
 type EditorPanelProps = {
-  patchedDocument?: string;
+  patchedDocument: Blob;
+  patchedDocumentName: string;
 };
 
-export default ({ patchedDocument }: EditorPanelProps) => {
+export default ({ patchedDocument, patchedDocumentName }: EditorPanelProps) => {
   const router = useRouter();
 
   return (
@@ -26,38 +28,11 @@ export default ({ patchedDocument }: EditorPanelProps) => {
         </Button>
 
         <Button
-          className={`bg-[#0c6bff] ${
-            patchedDocument ? 'cursor-pointer' : 'cursor-not-allowed'
-          }`}
-          title={`Download file ${patchedDocument}`}
-          onClick={async () => {
-            if (window.location.hostname === 'localhost') {
-              router.push(`/${patchedDocument}`);
-              return;
-            }
-
-            const downloadDocument = async (document: string) => {
-              const req = await fetch('/api/document/download', {
-                method: 'POST',
-                body: JSON.stringify(document),
-              });
-
-              return await req.json();
-            };
-
-            const documentAsUint8Array = await downloadDocument(
-              patchedDocument!
-            ).then((data: Uint8Array) => data);
-
-            const blob = new Blob([documentAsUint8Array]);
-
-            const downloadLink = document.createElement('a');
-            downloadLink.href = URL.createObjectURL(blob);
-            downloadLink.download = patchedDocument!;
-            document.body.appendChild(downloadLink);
-            downloadLink.click();
-            document.body.removeChild(downloadLink);
+          onClick={() => {
+            downloadDocx(patchedDocument, patchedDocumentName);
           }}
+          className='bg-[#0c6bff] cursor-pointer'
+          title={`Download ${patchedDocumentName}.docx`}
         >
           <DownloadIcon width='16' height='16' />
           Download

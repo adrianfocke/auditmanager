@@ -4,19 +4,44 @@ export const tailwindStyles = {
   text: 'text-tina-blue',
 };
 
+enum Color {
+  black = '000000',
+  lightgrey = 'ececec',
+  darkergrey = '8f8f8f',
+}
+
+enum Size {
+  text = 20,
+}
+
 export const docxStyles = {
   text: {
-    color: '000000',
+    color: Color.black,
     font: 'Arial',
-    size: 20,
+    size: Size.text,
   } as IRunOptions,
   tableCell: {
     borders: {
       top: {
-        style: BorderStyle.DOT_DOT_DASH,
-        size: 3,
-        color: 'ff8000',
+        style: BorderStyle.SINGLE,
+        size: 6,
+        color: Color.lightgrey,
       },
-    },
+      left: {
+        style: BorderStyle.SINGLE,
+        size: 6,
+        color: Color.lightgrey,
+      },
+      right: {
+        style: BorderStyle.SINGLE,
+        size: 6,
+        color: Color.darkergrey,
+      },
+      bottom: {
+        style: BorderStyle.SINGLE,
+        size: 6,
+        color: Color.darkergrey,
+      },
+    } as ITableCellOptions['borders'],
   } as ITableCellOptions,
 };

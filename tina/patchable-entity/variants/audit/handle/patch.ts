@@ -1,14 +1,7 @@
 import { docxStyles } from '@/styles';
 import type { ViewType } from '@/types/index';
 import { HiddenPreviewInfo, StyledTextRun } from '@/utils/styledComponents';
-import {
-  Paragraph,
-  Table,
-  TableCell,
-  TableRow,
-  WidthType,
-  type IPatch,
-} from 'docx';
+import { Paragraph, Table, TableCell, TableRow, type IPatch } from 'docx';
 
 export const retrievePatchInstruction = (hints: {
   placeholder: string;
@@ -73,10 +66,6 @@ export const retrievePatchInstruction = (hints: {
         children: [
           new Table({
             rows: [...rows],
-            width: {
-              size: 100,
-              type: WidthType.AUTO,
-            },
             columnWidths: [1562, 8784, 2556, 1920],
           }),
         ],

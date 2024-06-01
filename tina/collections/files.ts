@@ -22,26 +22,11 @@ export default {
       label: 'Entity',
       type: 'reference',
       collections: ['audit'],
-      ui: {
-        description: 'The database entity',
-      },
     },
     {
       name: 'skeleton',
       label: 'Skeleton',
       type: 'image',
-      ui: {
-        description: 'The empty .docx file to be filled',
-      },
-    },
-    {
-      name: 'language',
-      label: 'Language',
-      type: 'string',
-      options: ['deu', 'eng'],
-      ui: {
-        defaultValue: 'deu',
-      },
     },
   ],
 } as Collection;

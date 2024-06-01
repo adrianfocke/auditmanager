@@ -1,25 +1,28 @@
+import { docxStyles } from '@/styles';
 import type { ViewType } from '@/types/index';
-import {
-  Paragraph,
-  Table,
-  TableCell,
-  TableRow,
-  TextRun,
-  WidthType,
-  type IPatch,
-} from 'docx';
+import { HiddenPreviewInfo, StyledTextRun } from '@/utils/styledComponents';
+import { Paragraph, Table, TableCell, TableRow, type IPatch } from 'docx';
 
-export const retrievePatchInstruction = (
-  value: string | string[] | undefined,
-  viewType: ViewType
-): IPatch => {
+export const retrievePatchInstruction = (hints: {
+  placeholder: string;
+  value: string | string[] | undefined;
+  viewType: ViewType;
+}): IPatch => {
+  const { placeholder, value, viewType } = hints;
+
   if (!value || !viewType) {
     return { type: 'paragraph', children: [] };
   }
 
   switch (viewType) {
     case 'TEXT':
-      return { type: 'paragraph', children: [new TextRun(value as string)] };
+      return {
+        type: 'paragraph',
+        children: [
+          StyledTextRun(value as string),
+          HiddenPreviewInfo(placeholder),
+        ],
+      };
     case 'LIST':
       return {
         type: 'file',
@@ -27,36 +30,29 @@ export const retrievePatchInstruction = (
           ...(value as string[]).map(
             (text) =>
               new Paragraph({
-                text,
+                children: [StyledTextRun(text), HiddenPreviewInfo(placeholder)],
               })
           ),
         ],
       };
     case 'TABLE':
       const rows = (value as []).map((row, i) => {
-        const cells = (row as []).map((text) => {
+        const cells = (row as []).map((text, i) => {
           const children = Array.isArray(text)
             ? (text as []).map(
                 (text, i) =>
                   new Paragraph({
-                    children: [
-                      new TextRun({
-                        text,
-                      }),
-                    ],
+                    children: [StyledTextRun(text)],
                   })
               )
             : [
                 new Paragraph({
-                  children: [
-                    new TextRun({
-                      text,
-                    }),
-                  ],
+                  children: [StyledTextRun(text)],
                 }),
               ];
 
           return new TableCell({
+            ...docxStyles.tableCell,
             children,
           });
         });
@@ -70,10 +66,6 @@ export const retrievePatchInstruction = (
         children: [
           new Table({
             rows: [...rows],
-            width: {
-              size: 100,
-              type: WidthType.AUTO,
-            },
             columnWidths: [1562, 8784, 2556, 1920],
           }),
         ],

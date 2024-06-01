@@ -1,16 +1,14 @@
 'use server';
 import patchableEntityMapper from '@/tina/patchable-entity/patchableEntityMapper';
 import type { PatchBackendParcel, Patches, Skeleton } from '@/types/index';
-import { createClient } from '@supabase/supabase-js';
 import { patchDocument } from 'docx';
 import { readFileSync, writeFileSync } from 'fs';
-import path from 'path';
 import { staticFilePath } from './path';
 
 export default async (patchParcel: PatchBackendParcel) => {
   const {
     file: {
-      file: { entity, skeleton, name },
+      file: { entity, skeleton },
     },
     placeholders,
   } = patchParcel;
@@ -24,43 +22,10 @@ export default async (patchParcel: PatchBackendParcel) => {
       patches,
     }).then((patch) => patch);
 
-    return process.env.NODE_ENV === 'development'
-      ? patchLocalDocument(patch, name)
-      : await patchProductionDocument(patch, name);
+    return patch;
   } catch (error) {
     console.error(error);
   }
 
   return undefined;
-};
-
-const patchLocalDocument = (patch: Uint8Array, filename: string) => {
-  const newFilePath = path.join(`public/${filename}.docx`);
-  writeFileSync(newFilePath, patch);
-
-  try {
-    writeFileSync(newFilePath, patch);
-    return `${filename}.docx`;
-  } catch (error) {
-    console.error(error);
-  }
-
-  return undefined;
-};
-
-const patchProductionDocument = async (patch: Uint8Array, filename: string) => {
-  const supabaseClient = createClient(
-    process.env.SUPABASE_URL!,
-    process.env.SUPABASE_TOKEN!
-  );
-
-  const { data, error } = await supabaseClient.storage
-    .from('Documents')
-    .upload(`${filename}.docx`, patch, {
-      contentType:
-        'application/vnd.openxmlformats-officedocument.wordprocessingml.document',
-      upsert: true,
-    });
-
-  return data?.path ? data.path : undefined;
 };

@@ -4,7 +4,7 @@ export const LETTERS_NUMBERS_HYPEN_BLANK_REGEX = /^[a-zA-Z0-9-\s]+$/;
 
 // TODO get rid of this
 export const LOCATIONS = [
-  '1100 Wien, Am Hauptbahnhof 1',
+  '1100 Wien, An der Spinnerin 10',
   '1020 Wien, Lassallestraße 5',
 ];
 

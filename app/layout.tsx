@@ -11,9 +11,7 @@ export default function RootLayout({
     <html lang='en'>
       <body className='bg-gray-50'>
         <Theme>
-          <Container className='p-6' size='4'>
-            {children}
-          </Container>
+          <Container size='4'>{children}</Container>
         </Theme>
       </body>
     </html>

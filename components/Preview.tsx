@@ -47,6 +47,7 @@ export default ({ file, patchedDocument }: PreviewProps) => {
       className='overflow-auto border rounded-md m-6'
       style={{ backgroundColor: 'white' }}
       id='preview-container'
+      data-testid='preview-container'
     />
   );
 };

@@ -6,8 +6,8 @@ import { TextDecoder, TextEncoder } from 'util';
 
 Object.assign(global, { TextDecoder, TextEncoder });
 
-const expectedHtmlString = '<p>{{field_awesome_test_field_1}}</p>';
-const expectedPlaceholders = ['field_awesome_test_field_1'];
+const expectedHtmlString = '<p>{{field_client_name}}</p>';
+const expectedPlaceholders = ['field_client_name'];
 
 describe('Extract placeholders', () => {
   it('creates html string from docx', async () => {

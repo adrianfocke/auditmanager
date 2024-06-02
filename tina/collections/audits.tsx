@@ -1,4 +1,4 @@
-import { Collection } from 'tinacms';
+import type { Collection } from 'tinacms';
 import { DURATIONS, LOCATIONS, TIMES } from '../../utils/constants';
 import {
   readableDateFromDatetime,

@@ -1,5 +1,5 @@
 import type client from '@/tina/__generated__/client';
-import { FileQuery } from '@/tina/__generated__/types';
+import type { FileQuery } from '@/tina/__generated__/types';
 import type { IPatch } from 'docx';
 
 export type Skeleton = `/uploads/skeletons/${string}.docx`;

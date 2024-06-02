@@ -6,7 +6,7 @@ import { useEffect } from 'react';
 
 type PreviewProps = {
   file: FileQuery;
-  patchedDocument: Blob /* format used for rendering */;
+  patchedDocument: Blob;
 };
 
 export default ({ file, patchedDocument }: PreviewProps) => {
@@ -34,6 +34,7 @@ export default ({ file, patchedDocument }: PreviewProps) => {
                 'data-tina-field',
                 givenEntity.placeholderTinaField(file, span.innerHTML)!
               );
+              parentParagraph!.className = 'p-1 m-1';
             });
         })
         .catch((err) => console.error('docx: error', err));

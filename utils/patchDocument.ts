@@ -2,7 +2,7 @@
 import patchableEntityMapper from '@/tina/patchable-entity/patchableEntityMapper';
 import type { PatchBackendParcel, Patches, Skeleton } from '@/types/index';
 import { patchDocument } from 'docx';
-import { readFileSync, writeFileSync } from 'fs';
+import { readFileSync } from 'fs';
 import { staticFilePath } from './path';
 
 export default async (patchParcel: PatchBackendParcel) => {

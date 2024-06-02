@@ -1,6 +1,6 @@
 import downloadDocx from '@/utils/downloadDocx';
 import { DownloadIcon, ListBulletIcon } from '@radix-ui/react-icons';
-import { Button, Flex } from '@radix-ui/themes';
+import { AccessibleIcon, Button, Flex } from '@radix-ui/themes';
 import { useRouter } from 'next/navigation';
 
 type EditorPanelProps = {
@@ -13,7 +13,7 @@ export default ({ patchedDocument, patchedDocumentName }: EditorPanelProps) => {
 
   return (
     <div
-      className='w-full mb-8 sticky top-0 z-10 bg-tina-grey p-6'
+      className='w-full mb-8 sticky top-0 z-10 bg-slate-100 p-6'
       style={{ borderBottom: '1px solid lightgrey' }}
     >
       <Flex gap={'2'} align={'center'}>
@@ -23,7 +23,9 @@ export default ({ patchedDocument, patchedDocumentName }: EditorPanelProps) => {
           className='bg-[#0c6bff] cursor-pointer'
           title={`Go to all files`}
         >
-          <ListBulletIcon width='16' height='16' />
+          <AccessibleIcon label={'All Files'}>
+            <ListBulletIcon width='16' height='16'></ListBulletIcon>
+          </AccessibleIcon>
           All Files
         </Button>
 
@@ -34,7 +36,9 @@ export default ({ patchedDocument, patchedDocumentName }: EditorPanelProps) => {
           className='bg-[#0c6bff] cursor-pointer'
           title={`Download ${patchedDocumentName}.docx`}
         >
-          <DownloadIcon width='16' height='16' />
+          <AccessibleIcon label={'Download'}>
+            <DownloadIcon width='16' height='16'></DownloadIcon>
+          </AccessibleIcon>
           Download
         </Button>
       </Flex>

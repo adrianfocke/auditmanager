@@ -1,4 +1,4 @@
-import React from 'react';
+import React from 'react'; /* do not remove */
 import { defineConfig } from 'tinacms';
 import audits from './collections/audits';
 import companies from './collections/companies';

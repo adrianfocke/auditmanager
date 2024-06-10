@@ -1,3 +1,6 @@
 {
-  "name": "ISO/IEC 27001:2013"
+  "name": "ISO/IEC 27001:2013",
+  "sections": [
+    "4.1"
+  ]
 }

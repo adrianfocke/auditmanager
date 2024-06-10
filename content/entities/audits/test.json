@@ -1,3 +1,5 @@
 {
-  "certificant": "content/entities/companies/test.json"
+  "certifier": "content/entities/companies/TAGMBH.json",
+  "certificant": "content/entities/companies/ÖBB_PV.json",
+  "method": "Erstzertifizierung"
 }

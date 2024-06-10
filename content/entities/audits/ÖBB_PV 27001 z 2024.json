@@ -116,6 +116,16 @@
           ],
           "auditors": [
             "Christian Focke-Kiss"
+          ],
+          "questions": [
+            {
+              "questionsReference": "content/entities/standards/ISO-IEC 27001:2022.json",
+              "findings": [
+                {
+                  "findingsInfo": "my first finding"
+                }
+              ]
+            }
           ]
         }
       ]

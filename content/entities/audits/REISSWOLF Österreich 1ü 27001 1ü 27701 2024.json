@@ -74,14 +74,14 @@
           "questions": [
             {
               "questionsReference": "content/entities/standards/ISO-IEC 27001:2013.json",
-              "questionsItem": "5.3 Rollen, Verantwortlichkeiten und Befugnisse in der Organisation"
+              "questionsItem": "5.1 Führung und Verpflichtung"
             },
             {
               "questionsItem": "5.2 Politik"
             },
             {
               "questionsReference": "content/entities/standards/ISO-IEC 27001:2013.json",
-              "questionsItem": "5.1 Führung und Verpflichtung"
+              "questionsItem": "5.3 Rollen, Verantwortlichkeiten und Befugnisse in der Organisation"
             }
           ]
         },

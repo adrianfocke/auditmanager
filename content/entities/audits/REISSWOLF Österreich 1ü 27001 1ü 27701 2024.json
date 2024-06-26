@@ -348,6 +348,13 @@
         },
         {
           "context": "A.7.4 Datenschutz durch Technikgestaltung und datenschutzfreundliche Voreinstellungen",
+          "duration": "01:00",
+          "partners": [
+            "Manuel Moser"
+          ],
+          "auditors": [
+            "Christian Focke-Kiss"
+          ],
           "questions": [
             {
               "questionsReference": "content/entities/standards/ISO-IEC 27701:2019.json",

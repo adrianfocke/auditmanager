@@ -89,6 +89,9 @@
           "context": "6 Planung",
           "questions": [
             {
+              "questionsItem": "5.4.2 Informationssicherheitsziele und Planung zu deren Erreichung"
+            },
+            {
               "questionsReference": "content/entities/standards/ISO-IEC 27701:2019.json",
               "questionsItem": "5.4.1 Aktionen zum Umgang mit Risiken und Chancen"
             },

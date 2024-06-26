@@ -1,6 +1,7 @@
 {
   "name": "ISO/IEC 27001:2013",
   "sections": [
+    "A.16 Handhabung von Informationssicherheitsvorfällen",
     "A.15 Lieferantenbeziehungen",
     "A.14 Anschaffung, Entwicklung und Instandhaltung von Systemen",
     "A.13 Kommunikationssicherheit",

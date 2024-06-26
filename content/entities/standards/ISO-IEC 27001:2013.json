@@ -1,6 +1,7 @@
 {
   "name": "ISO/IEC 27001:2013",
   "sections": [
+    "A.18 Compliance",
     "A.17 Informationssicherheitsaspekte beim Business Continuity Management",
     "A.16 Handhabung von Informationssicherheitsvorfällen",
     "A.15 Lieferantenbeziehungen",

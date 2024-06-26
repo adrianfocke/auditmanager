@@ -275,11 +275,9 @@
       "location": "Gewerbegebiet Gärberbach 4-6, 6020 Innsbruck",
       "sessions": [
         {
-          "context": "A.13 Kommunikationssicherheit",
           "questions": [
             {
-              "questionsReference": "content/entities/standards/ISO-IEC 27001:2013.json",
-              "questionsItem": "A.13 Kommunikationssicherheit"
+              "questionsItem": "A.14 Anschaffung, Entwicklung und Instandhaltung von Systemen"
             }
           ]
         },
@@ -309,6 +307,15 @@
             {
               "questionsReference": "content/entities/standards/ISO-IEC 27001:2013.json",
               "questionsItem": "A.12 Betriebssicherheit"
+            }
+          ]
+        },
+        {
+          "context": "A.13 Kommunikationssicherheit",
+          "questions": [
+            {
+              "questionsReference": "content/entities/standards/ISO-IEC 27001:2013.json",
+              "questionsItem": "A.13 Kommunikationssicherheit"
             }
           ]
         },

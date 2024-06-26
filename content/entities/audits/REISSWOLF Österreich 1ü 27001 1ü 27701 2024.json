@@ -275,14 +275,6 @@
       "location": "Gewerbegebiet Gärberbach 4-6, 6020 Innsbruck",
       "sessions": [
         {
-          "context": "A.14 Anschaffung, Entwicklung und Instandhaltung von Systemen",
-          "questions": [
-            {
-              "questionsItem": "A.14 Anschaffung, Entwicklung und Instandhaltung von Systemen"
-            }
-          ]
-        },
-        {
           "reusableContext": "Eröffnungsgespräch mittlerer Tag",
           "duration": "00:15",
           "partners": [
@@ -312,11 +304,23 @@
           ]
         },
         {
+          "context": "Mittagspause",
+          "duration": "01:00"
+        },
+        {
           "context": "A.13 Kommunikationssicherheit",
           "questions": [
             {
               "questionsReference": "content/entities/standards/ISO-IEC 27001:2013.json",
               "questionsItem": "A.13 Kommunikationssicherheit"
+            }
+          ]
+        },
+        {
+          "context": "A.14 Anschaffung, Entwicklung und Instandhaltung von Systemen",
+          "questions": [
+            {
+              "questionsItem": "A.14 Anschaffung, Entwicklung und Instandhaltung von Systemen"
             }
           ]
         },

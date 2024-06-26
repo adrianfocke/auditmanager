@@ -35,7 +35,9 @@
         },
         {
           "questions": [
-            {},
+            {
+              "questionsReference": "content/entities/standards/ISO-IEC 27701:2019.json"
+            },
             {
               "questionsReference": "content/entities/standards/ISO-IEC 27701:2019.json",
               "questionsItem": "5.2.3 Festlegung des Anwendungsbereichs des Informationssicherheitsmanagementsystems"

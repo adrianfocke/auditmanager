@@ -22,7 +22,8 @@
       "startTime": "09:00",
       "sessions": [
         {
-          "reusableContext": "Abschlussgespräch mittlerer Tag",
+          "reusableContext": "Eröffnungsgespräch erster Tag",
+          "duration": "00:30",
           "partners": [
             "Manuel Moser",
             "Stefan Linges"
@@ -33,7 +34,7 @@
           ]
         },
         {
-          "reusableContext": "Eröffnungsgespräch erster Tag",
+          "reusableContext": "Abschlussgespräch mittlerer Tag",
           "partners": [
             "Manuel Moser",
             "Stefan Linges"

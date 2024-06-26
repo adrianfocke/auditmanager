@@ -15,6 +15,7 @@
   ],
   "auditors": [
     {
+      "isLead": true,
       "person": "content/entities/people/FOC.json"
     }
   ]

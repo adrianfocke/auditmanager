@@ -73,6 +73,9 @@
           "context": "5 Führung",
           "questions": [
             {
+              "questionsItem": "A.5 Informationssicherheitsrichtlinien"
+            },
+            {
               "questionsReference": "content/entities/standards/ISO-IEC 27001:2013.json",
               "questionsItem": "5.1 Führung und Verpflichtung"
             },

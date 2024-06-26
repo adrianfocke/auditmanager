@@ -35,6 +35,7 @@
         },
         {
           "reusableContext": "Abschlussgespräch mittlerer Tag",
+          "duration": "00:15",
           "partners": [
             "Manuel Moser",
             "Stefan Linges"

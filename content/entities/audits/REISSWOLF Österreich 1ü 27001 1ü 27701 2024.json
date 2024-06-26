@@ -224,6 +224,12 @@
         },
         {
           "context": "A.7.2 Bedingungen für die Erhebung und Verarbeitung",
+          "partners": [
+            "Manuel Moser"
+          ],
+          "auditors": [
+            "Christian Focke-Kiss"
+          ],
           "questions": [
             {
               "questionsReference": "content/entities/standards/ISO-IEC 27701:2019.json",

@@ -3,6 +3,13 @@
   "certificant": "content/entities/companies/REISSWOLF Österreich GmbH.json",
   "startDate": "2024-07-15T22:00:00.000Z",
   "endDate": "2024-07-22T22:00:00.000Z",
+  "standards": [
+    {
+      "standard": "content/entities/standards/ISO-IEC 27001:2013.json",
+      "isoAuditTypeRelation": "Multi-Site-Audit / Matrix-Audit",
+      "registrationNumber": "TA420223015515"
+    }
+  ],
   "dates": [
     {
       "date": "2024-07-15T22:00:00.000Z",
@@ -24,11 +31,11 @@
   ],
   "partners": [
     {
-      "person": "content/entities/people/stefan.linges@reisswolf.at.json"
-    },
-    {
       "isRepresentative": true,
       "person": "content/entities/people/manuel.moser@reisswolf.at.json"
+    },
+    {
+      "person": "content/entities/people/stefan.linges@reisswolf.at.json"
     }
   ],
   "level": "2",

@@ -1,6 +1,7 @@
 {
   "name": "ISO/IEC 27001:2013",
   "sections": [
+    "7.5 Dokumentierte Information",
     "7.4 Kommunikation",
     "7.3 Bewusstsein",
     "7.2 Kompetenz",

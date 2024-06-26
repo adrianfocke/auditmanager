@@ -1,20 +1,6 @@
 {
   "name": "ISO/IEC 27001:2013",
   "sections": [
-    "A.18 Compliance",
-    "A.17 Informationssicherheitsaspekte beim Business Continuity Management",
-    "A.16 Handhabung von Informationssicherheitsvorfällen",
-    "A.15 Lieferantenbeziehungen",
-    "A.14 Anschaffung, Entwicklung und Instandhaltung von Systemen",
-    "A.13 Kommunikationssicherheit",
-    "A.12 Betriebssicherheit",
-    "A.11 Physische und umgebungsbezogene Sicherheit",
-    "A.10 Kryptographie",
-    "A.9 Zugangssteuerung",
-    "A.8 Verwaltung der Werte",
-    "A.7 Personalsicherheit",
-    "A.6 Organisation der Informationssicherheit",
-    "A.5 Informationssicherheitsrichtlinien",
     "4 Kontext der Organisation",
     "4.1 Verstehen der Organisation und ihres Kontextes",
     "4.2 Verstehen der Erfordernisse und Erwartungen interessierter Parteien",
@@ -49,6 +35,20 @@
     "9.3 Managementbewertung",
     "10 Verbesserung",
     "10.1 Nichtkonformität und Korrekturmaßnahmen",
-    "10.2 Fortlaufende Verbesserung"
+    "10.2 Fortlaufende Verbesserung",
+    "A.5 Informationssicherheitsrichtlinien",
+    "A.6 Organisation der Informationssicherheit",
+    "A.7 Personalsicherheit",
+    "A.8 Verwaltung der Werte",
+    "A.9 Zugangssteuerung",
+    "A.10 Kryptographie",
+    "A.11 Physische und umgebungsbezogene Sicherheit",
+    "A.12 Betriebssicherheit",
+    "A.13 Kommunikationssicherheit",
+    "A.14 Anschaffung, Entwicklung und Instandhaltung von Systemen",
+    "A.15 Lieferantenbeziehungen",
+    "A.16 Handhabung von Informationssicherheitsvorfällen",
+    "A.17 Informationssicherheitsaspekte beim Business Continuity Management",
+    "A.18 Compliance"
   ]
 }

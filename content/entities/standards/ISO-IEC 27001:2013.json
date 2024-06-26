@@ -1,6 +1,7 @@
 {
   "name": "ISO/IEC 27001:2013",
   "sections": [
+    "A.6 Organisation der Informationssicherheit",
     "A.5 Informationssicherheitsrichtlinien",
     "4 Kontext der Organisation",
     "4.1 Verstehen der Organisation und ihres Kontextes",

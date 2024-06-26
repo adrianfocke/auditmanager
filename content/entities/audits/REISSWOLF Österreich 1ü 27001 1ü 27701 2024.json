@@ -1,0 +1,13 @@
+{
+  "certifier": "content/entities/companies/TAGMBH.json",
+  "certificant": "content/entities/companies/REISSWOLF Österreich GmbH.json",
+  "startDate": "2024-07-15T22:00:00.000Z",
+  "endDate": "2024-07-22T22:00:00.000Z",
+  "standards": [
+    {}
+  ],
+  "dates": [
+    {}
+  ],
+  "method": "1. Überwachung"
+}

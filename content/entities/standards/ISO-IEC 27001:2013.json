@@ -1,6 +1,7 @@
 {
   "name": "ISO/IEC 27001:2013",
   "sections": [
+    "6 Planung",
     "5 Führung",
     "4 Kontext der Organisation",
     "4.1 Verstehen der Organisation und ihres Kontextes",

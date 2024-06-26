@@ -1,6 +1,7 @@
 {
   "name": "ISO-IEC 27701:2019",
   "sections": [
+    "5.2 Kontext der Organisation",
     "5.2.1 Verstehen der Organisation und ihres Kontextes",
     "5.2.2 Verstehen der Erfordernisse und Erwartungen der interessierten Parteien",
     "5.2.3 Festlegung des Anwendungsbereichs des Informationssicherheitsmanagementsystems",

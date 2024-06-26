@@ -1,6 +1,7 @@
 {
   "name": "ISO/IEC 27001:2013",
   "sections": [
+    "A.14 Anschaffung, Entwicklung und Instandhaltung von Systemen",
     "A.13 Kommunikationssicherheit",
     "A.12 Betriebssicherheit",
     "A.11 Physische und umgebungsbezogene Sicherheit",

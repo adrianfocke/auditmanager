@@ -15,11 +15,11 @@
   ],
   "auditors": [
     {
-      "person": "content/entities/people/HAO.json"
-    },
-    {
       "isLead": true,
       "person": "content/entities/people/FOC.json"
+    },
+    {
+      "person": "content/entities/people/HAO.json"
     }
   ],
   "level": "2",

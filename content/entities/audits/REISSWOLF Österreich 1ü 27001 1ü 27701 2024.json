@@ -225,6 +225,7 @@
         {
           "reusableContext": "Eröffnungsgespräch mittlerer Tag",
           "context": "10 Verbesserung",
+          "duration": "01:00",
           "partners": [
             "Stefan Linges",
             "Manuel Moser"

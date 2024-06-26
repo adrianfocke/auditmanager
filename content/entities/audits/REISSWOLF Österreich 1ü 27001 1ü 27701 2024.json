@@ -108,8 +108,7 @@
           "context": "7 Unterstützung",
           "questions": [
             {
-              "questionsReference": "content/entities/standards/ISO-IEC 27001:2013.json",
-              "questionsItem": "7.5 Dokumentierte Information"
+              "questionsItem": "A.7 Personalsicherheit"
             },
             {
               "questionsReference": "content/entities/standards/ISO-IEC 27001:2013.json",
@@ -124,6 +123,10 @@
             },
             {
               "questionsItem": "7.4 Kommunikation"
+            },
+            {
+              "questionsReference": "content/entities/standards/ISO-IEC 27001:2013.json",
+              "questionsItem": "7.5 Dokumentierte Information"
             }
           ]
         },

@@ -36,6 +36,14 @@
         {
           "context": "4 Kontext der Organisation",
           "duration": "01:00",
+          "partners": [
+            "Manuel Moser",
+            "Stefan Linges"
+          ],
+          "auditors": [
+            "Christian Focke-Kiss",
+            "Harald Montenegro"
+          ],
           "questions": [
             {
               "questionsReference": "content/entities/standards/ISO-IEC 27001:2013.json",

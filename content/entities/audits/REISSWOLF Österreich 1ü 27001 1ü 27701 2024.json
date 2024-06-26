@@ -37,7 +37,7 @@
           "questions": [
             {
               "questionsReference": "content/entities/standards/ISO-IEC 27001:2013.json",
-              "questionsItem": "4.3 Festlegen des Anwendungsbereichs des Informationssicherheitsmanagementsystems"
+              "questionsItem": "4.4 Informationssicherheitsmanagementsystem"
             },
             {
               "questionsReference": "content/entities/standards/ISO-IEC 27001:2013.json",
@@ -46,6 +46,10 @@
             {
               "questionsReference": "content/entities/standards/ISO-IEC 27001:2013.json",
               "questionsItem": "4.2 Verstehen der Erfordernisse und Erwartungen interessierter Parteien"
+            },
+            {
+              "questionsReference": "content/entities/standards/ISO-IEC 27001:2013.json",
+              "questionsItem": "4.3 Festlegen des Anwendungsbereichs des Informationssicherheitsmanagementsystems"
             }
           ]
         },

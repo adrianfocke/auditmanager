@@ -139,6 +139,15 @@
         },
         {
           "context": "7 Unterstützung",
+          "duration": "01:00",
+          "partners": [
+            "Manuel Moser",
+            "Stefan Linges"
+          ],
+          "auditors": [
+            "Harald Montenegro",
+            "Christian Focke-Kiss"
+          ],
           "questions": [
             {
               "questionsReference": "content/entities/standards/ISO-IEC 27001:2013.json",

@@ -36,27 +36,12 @@
         {
           "questions": [
             {
-              "questionsReference": "content/entities/standards/ISO-IEC 27701:2019.json",
-              "questionsItem": "5.2.4 Managementsystem für Informationssicherheit"
-            },
-            {
-              "questionsReference": "content/entities/standards/ISO-IEC 27701:2019.json",
-              "questionsItem": "5.2.3 Festlegung des Anwendungsbereichs des Informationssicherheitsmanagementsystems"
-            },
-            {
               "questionsReference": "content/entities/standards/ISO-IEC 27001:2013.json",
               "questionsItem": "4.1 Verstehen der Organisation und ihres Kontextes"
             },
             {
-              "questionsReference": "content/entities/standards/ISO-IEC 27701:2019.json",
-              "questionsItem": "5.2.1 Verstehen der Organisation und ihres Kontextes"
-            },
-            {
               "questionsReference": "content/entities/standards/ISO-IEC 27001:2013.json",
               "questionsItem": "4.2 Verstehen der Erfordernisse und Erwartungen interessierter Parteien"
-            },
-            {
-              "questionsItem": "5.2.2 Verstehen der Erfordernisse und Erwartungen der interessierten Parteien"
             },
             {
               "questionsReference": "content/entities/standards/ISO-IEC 27001:2013.json",
@@ -65,6 +50,21 @@
             {
               "questionsReference": "content/entities/standards/ISO-IEC 27001:2013.json",
               "questionsItem": "4.4 Informationssicherheitsmanagementsystem"
+            },
+            {
+              "questionsReference": "content/entities/standards/ISO-IEC 27701:2019.json",
+              "questionsItem": "5.2.1 Verstehen der Organisation und ihres Kontextes"
+            },
+            {
+              "questionsItem": "5.2.2 Verstehen der Erfordernisse und Erwartungen der interessierten Parteien"
+            },
+            {
+              "questionsReference": "content/entities/standards/ISO-IEC 27701:2019.json",
+              "questionsItem": "5.2.3 Festlegung des Anwendungsbereichs des Informationssicherheitsmanagementsystems"
+            },
+            {
+              "questionsReference": "content/entities/standards/ISO-IEC 27701:2019.json",
+              "questionsItem": "5.2.4 Managementsystem für Informationssicherheit"
             }
           ]
         },

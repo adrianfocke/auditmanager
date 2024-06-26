@@ -1,6 +1,7 @@
 {
   "name": "ISO-IEC 27701:2019",
   "sections": [
+    "5.4.2 Informationssicherheitsziele und Planung zu deren Erreichung",
     "A.7.2 Bedingungen für die Erhebung und Verarbeitung",
     "A.7.3 Verpflichtungen gegenüber betroffenen Personen",
     "A.7.4 Datenschutz durch Technikgestaltung und datenschutzfreundliche Voreinstellungen",

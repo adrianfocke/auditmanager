@@ -36,7 +36,8 @@
         {
           "questions": [
             {
-              "questionsReference": "content/entities/standards/ISO-IEC 27701:2019.json"
+              "questionsReference": "content/entities/standards/ISO-IEC 27701:2019.json",
+              "questionsItem": "5.2.4 Managementsystem für Informationssicherheit"
             },
             {
               "questionsReference": "content/entities/standards/ISO-IEC 27701:2019.json",

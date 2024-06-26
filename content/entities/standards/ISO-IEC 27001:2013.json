@@ -1,6 +1,7 @@
 {
   "name": "ISO/IEC 27001:2013",
   "sections": [
+    "6.1 Maßnahmen zum Umgang mit Risiken und Chancen",
     "10.2 Fortlaufende Verbesserung",
     "10.1 Nichtkonformität und Korrekturmaßnahmen",
     "9.3 Managementbewertung",

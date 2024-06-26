@@ -5,6 +5,11 @@
   "endDate": "2024-07-22T22:00:00.000Z",
   "standards": [
     {
+      "standard": "content/entities/standards/ISO-IEC 27701:2019.json",
+      "isoAuditTypeRelation": "Multi-Site-Audit / Matrix-Audit",
+      "registrationNumber": "TA420223015515"
+    },
+    {
       "standard": "content/entities/standards/ISO-IEC 27001:2013.json",
       "isoAuditTypeRelation": "Multi-Site-Audit / Matrix-Audit",
       "registrationNumber": "TA420223015515"

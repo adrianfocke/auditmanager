@@ -275,6 +275,13 @@
       "location": "Gewerbegebiet Gärberbach 4-6, 6020 Innsbruck",
       "sessions": [
         {
+          "questions": [
+            {
+              "questionsReference": "content/entities/standards/ISO-IEC 27001:2013.json"
+            }
+          ]
+        },
+        {
           "reusableContext": "Eröffnungsgespräch mittlerer Tag",
           "duration": "00:15",
           "partners": [

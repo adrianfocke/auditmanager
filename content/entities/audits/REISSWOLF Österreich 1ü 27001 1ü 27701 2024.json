@@ -86,6 +86,12 @@
           ]
         },
         {
+          "context": "6 Planung",
+          "questions": [
+            {}
+          ]
+        },
+        {
           "reusableContext": "Abschlussgespräch mittlerer Tag",
           "duration": "00:15",
           "partners": [

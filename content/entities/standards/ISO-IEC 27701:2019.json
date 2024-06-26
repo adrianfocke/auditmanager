@@ -1,6 +1,7 @@
 {
   "name": "ISO-IEC 27701:2019",
   "sections": [
+    "B.8.4 Datenschutz durch Technikgestaltung und datenschutzfreundliche Voreinstellungen",
     "B.8.5 Weitergabe, Übertragung und Offenlegung von personenbezogenen Daten"
   ]
 }

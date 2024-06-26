@@ -34,6 +34,7 @@
           ]
         },
         {
+          "context": "Kontext der Organisation",
           "questions": [
             {
               "questionsReference": "content/entities/standards/ISO-IEC 27001:2013.json",

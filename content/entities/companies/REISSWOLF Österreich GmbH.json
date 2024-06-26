@@ -1,3 +1,9 @@
 {
-  "scope": "REISSWOLF Österreich GmbH"
+  "scope": "REISSWOLF Österreich GmbH",
+  "locations": [
+    {
+      "location": "Reisswolf Straße 1, 2100 Leobendorf",
+      "isPrimaryLocation": true
+    }
+  ]
 }

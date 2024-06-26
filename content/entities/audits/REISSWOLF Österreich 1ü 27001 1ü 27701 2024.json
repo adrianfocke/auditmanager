@@ -89,18 +89,18 @@
           "context": "6 Planung",
           "questions": [
             {
-              "questionsItem": "5.4.2 Informationssicherheitsziele und Planung zu deren Erreichung"
+              "questionsReference": "content/entities/standards/ISO-IEC 27001:2013.json",
+              "questionsItem": "6.1 Maßnahmen zum Umgang mit Risiken und Chancen"
+            },
+            {
+              "questionsItem": "6.2 Informationssicherheitsziele und Planung zu deren Erreichung"
             },
             {
               "questionsReference": "content/entities/standards/ISO-IEC 27701:2019.json",
               "questionsItem": "5.4.1 Aktionen zum Umgang mit Risiken und Chancen"
             },
             {
-              "questionsReference": "content/entities/standards/ISO-IEC 27001:2013.json",
-              "questionsItem": "6.1 Maßnahmen zum Umgang mit Risiken und Chancen"
-            },
-            {
-              "questionsItem": "6.2 Informationssicherheitsziele und Planung zu deren Erreichung"
+              "questionsItem": "5.4.2 Informationssicherheitsziele und Planung zu deren Erreichung"
             }
           ]
         },

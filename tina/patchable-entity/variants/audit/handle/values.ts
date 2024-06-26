@@ -1,5 +1,5 @@
 import type { Time } from '@/types/index';
-import { FileQuery } from 'tina/__generated__/types';
+import type { FileQuery } from 'tina/__generated__/types';
 import { readableDateFromDatetime } from '../../../../../utils/readables';
 import type { AuditPlaceholder } from './placeholders';
 

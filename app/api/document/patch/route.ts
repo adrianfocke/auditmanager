@@ -1,6 +1,5 @@
 import type { PatchBackendParcel } from '@/types/index';
 import patchDocument from '@/utils/patchDocument';
-import { NextResponse } from 'next/server';
 
 export async function POST(request: Request) {
   const patchBackendParcel: PatchBackendParcel = await request.json();

@@ -6,13 +6,20 @@ import { uniqueUuid } from 'docx';
 import React from 'react';
 import { wrapFieldsWithMeta } from 'tinacms';
 import { useTinaQuery } from '../../app/api/tina/hook';
+import { readableFileNameFromEntity } from '../../utils/readables';
 import pickerMapper from './pickerMapper';
 
 export default (pickerType: PickerType) =>
   wrapFieldsWithMeta((props) => {
-    const reference: string | undefined = props.form.getFieldState(
+    let reference: string | undefined = props.form.getFieldState(
       props.input.name.replace('Item', 'Reference')
     )?.initial;
+
+    if (pickerType === 'Company Location') {
+      reference = readableFileNameFromEntity(
+        props.form.getState().values['certificant']
+      );
+    }
 
     const { data, error, isLoading } = useTinaQuery(
       pickerMapper[pickerType].query,

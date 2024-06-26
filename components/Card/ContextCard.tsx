@@ -1,4 +1,3 @@
-import { tailwindStyles } from '@/styles';
 import client from '@/tina/__generated__/client';
 import type { File } from '@/tina/__generated__/types';
 import * as ContextMenu from '@radix-ui/react-context-menu';
@@ -14,8 +13,6 @@ type ContextCardProps = {
 export default ({ file }: ContextCardProps) => {
   const router = useRouter();
 
-  console.log('File: ', file);
-
   return (
     <ContextMenu.Root>
       <ContextMenu.Trigger
@@ -24,19 +21,19 @@ export default ({ file }: ContextCardProps) => {
         <Card className={'h-48 w-full max-w-full rounded-lg'}>
           <Flex gap={'1'} className='mb-4'>
             <AccessibleIcon label='File link icon'>
-              <FileIcon className='text-tina-blue' width={24} height={24} />
+              <FileIcon className='text-blue-600' width={24} height={24} />
             </AccessibleIcon>
-            <Text className={`${tailwindStyles.text}`}>File</Text>
+            <Text className={`text-blue-600`}>File</Text>
           </Flex>
-          <Text className={`${tailwindStyles.text}`}>{file.name}</Text>
+          <Text className={'text-slate-800'}>{file.name}</Text>
         </Card>
       </ContextMenu.Trigger>
       <ContextMenu.Portal>
         <ContextMenu.Content className='w-48 px-2 py-2 text-sm border bg-white rounded-md overflow-hidden shadow-xl'>
           <ContextMenu.Label>
-            <Text className={`${tailwindStyles.text}`}>File Actions (WIP)</Text>
+            <Text className={`text-slate-800`}>File Actions (WIP)</Text>
           </ContextMenu.Label>
-          <ContextMenu.Item className='text-gray-500 w-full hover:bg-blue-500 px-1 py-1 rounded-md hover:text-white hover:cursor-pointer'>
+          <ContextMenu.Item className='text-slate-500 w-full hover:bg-blue-600 px-1 py-1 rounded-md hover:text-white hover:cursor-pointer'>
             Open
           </ContextMenu.Item>
           <ContextMenu.Item
@@ -47,7 +44,7 @@ export default ({ file }: ContextCardProps) => {
                 })
                 .then(() => router.refresh())
             }
-            className='text-gray-500 w-full hover:bg-blue-500 px-1 py-1 rounded-md hover:text-white hover:cursor-pointer'
+            className='text-slate-500 w-full hover:bg-blue-600 px-1 py-1 rounded-md hover:text-white hover:cursor-pointer'
           >
             Delete
           </ContextMenu.Item>
@@ -67,7 +64,7 @@ export default ({ file }: ContextCardProps) => {
                 })
                 .then(() => router.refresh())
             }
-            className='text-gray-500 w-full hover:bg-blue-500 px-1 py-1 rounded-md hover:text-white hover:cursor-pointer'
+            className='text-slate-500 w-full hover:bg-blue-600 px-1 py-1 rounded-md hover:text-white hover:cursor-pointer'
           >
             Duplicate
           </ContextMenu.Item>

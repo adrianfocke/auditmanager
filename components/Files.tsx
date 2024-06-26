@@ -12,7 +12,7 @@ type FilesProps = {
 
 export default ({ files }: FilesProps) => {
   return (
-    <Grid columns='3' gap='3'>
+    <Grid columns='3' gap='3' className='pt-6'>
       <NewFileCard />
 
       {files.map((file) => (

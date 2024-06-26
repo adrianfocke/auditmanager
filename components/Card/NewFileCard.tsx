@@ -1,23 +1,19 @@
 'use client';
-import { tailwindStyles } from '@/styles';
 import { LETTERS_NUMBERS_HYPEN_BLANK_REGEX } from '@/utils/constants';
 import { AccessibleIcon } from '@radix-ui/react-accessible-icon';
 import * as Form from '@radix-ui/react-form';
 import { FilePlusIcon } from '@radix-ui/react-icons';
 import { Button, Card, Flex, Text } from '@radix-ui/themes';
-import { useRouter } from 'next/navigation';
 
 /** Card component that includes a form to create new files */
 export default () => {
-  const router = useRouter();
-
   return (
-    <Card className='h-48 w-full max-w-full rounded-lg bg-tina-grey'>
+    <Card className='h-48 w-full max-w-full rounded-lg bg-slate-100'>
       <Flex gap={'1'} className='mb-4'>
         <AccessibleIcon label='Create new file cta icon'>
-          <FilePlusIcon className='text-tina-blue' width={24} height={24} />
+          <FilePlusIcon className='text-blue-600' width={24} height={24} />
         </AccessibleIcon>
-        <Text className={`${tailwindStyles.text}`}>New File</Text>
+        <Text className={'text-blue-600'}>New File</Text>
       </Flex>
       <Form.Root
         onSubmit={async (event) => {
@@ -49,7 +45,7 @@ export default () => {
           <Button
             title='Create a new file'
             variant='solid'
-            className='bg-tina-blue cursor-pointer'
+            className='bg-blue-600 cursor-pointer'
           >
             Create new file
           </Button>

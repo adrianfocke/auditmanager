@@ -1,5 +1,5 @@
 import type client from '@/tina/__generated__/client';
-import { FileQuery } from '@/tina/__generated__/types';
+import type { FileQuery } from '@/tina/__generated__/types';
 import type { IPatch } from 'docx';
 
 export type Skeleton = `/uploads/skeletons/${string}.docx`;
@@ -45,6 +45,7 @@ export type PickerType =
   | 'Audit Context'
   | 'Audit Type'
   | 'Audit Type Relation'
+  | 'Company Location'
   | 'Standard Section';
 export interface PickerTypeSettings {
   display: (data: any) => any;

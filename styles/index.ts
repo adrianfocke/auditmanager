@@ -1,9 +1,5 @@
 import { BorderStyle, type IRunOptions, type ITableCellOptions } from 'docx';
 
-export const tailwindStyles = {
-  text: 'text-tina-blue',
-};
-
 enum Color {
   black = '000000',
   lightgrey = 'ececec',

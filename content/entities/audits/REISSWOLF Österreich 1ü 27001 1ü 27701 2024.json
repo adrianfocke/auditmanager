@@ -275,13 +275,7 @@
       "location": "Gewerbegebiet Gärberbach 4-6, 6020 Innsbruck",
       "sessions": [
         {
-          "context": "A.12 Betriebssicherheit",
-          "questions": [
-            {
-              "questionsReference": "content/entities/standards/ISO-IEC 27001:2013.json",
-              "questionsItem": "A.12 Betriebssicherheit"
-            }
-          ]
+          "reusableContext": "Abschlussgespräch letzter Tag"
         },
         {
           "reusableContext": "Eröffnungsgespräch mittlerer Tag",
@@ -300,6 +294,15 @@
             {
               "questionsReference": "content/entities/standards/ISO-IEC 27001:2013.json",
               "questionsItem": "A.11 Physische und umgebungsbezogene Sicherheit"
+            }
+          ]
+        },
+        {
+          "context": "A.12 Betriebssicherheit",
+          "questions": [
+            {
+              "questionsReference": "content/entities/standards/ISO-IEC 27001:2013.json",
+              "questionsItem": "A.12 Betriebssicherheit"
             }
           ]
         }

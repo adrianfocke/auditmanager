@@ -22,11 +22,9 @@
       "startTime": "09:00",
       "sessions": [
         {
-          "context": "A.9 Zugangssteuerung",
           "questions": [
             {
-              "questionsReference": "content/entities/standards/ISO-IEC 27001:2013.json",
-              "questionsItem": "A.9 Zugangssteuerung"
+              "questionsReference": "content/entities/standards/ISO-IEC 27701:2019.json"
             }
           ]
         },
@@ -199,6 +197,15 @@
             {
               "questionsReference": "content/entities/standards/ISO-IEC 27001:2013.json",
               "questionsItem": "A.8 Verwaltung der Werte"
+            }
+          ]
+        },
+        {
+          "context": "A.9 Zugangssteuerung",
+          "questions": [
+            {
+              "questionsReference": "content/entities/standards/ISO-IEC 27001:2013.json",
+              "questionsItem": "A.9 Zugangssteuerung"
             }
           ]
         },

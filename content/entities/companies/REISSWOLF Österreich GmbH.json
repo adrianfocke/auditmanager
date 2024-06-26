@@ -2,9 +2,6 @@
   "scope": "REISSWOLF Österreich GmbH",
   "locations": [
     {
-      "location": "Framrach 39, 9433 St. Andrä"
-    },
-    {
       "location": "Reisswolf Straße 1, 2100 Leobendorf",
       "isPrimaryLocation": true
     },
@@ -13,6 +10,10 @@
     },
     {
       "location": "Gewerbegebiet Gärberbach 4-6, 6020 Innsbruck"
+    },
+    {
+      "location": "Framrach 39, 9433 St. Andrä"
     }
-  ]
+  ],
+  "fteScope": 73
 }

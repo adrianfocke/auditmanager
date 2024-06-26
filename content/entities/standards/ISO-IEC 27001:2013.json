@@ -1,6 +1,7 @@
 {
   "name": "ISO/IEC 27001:2013",
   "sections": [
+    "7.1 Ressourcen",
     "6.2 Informationssicherheitsziele und Planung zu deren Erreichung",
     "6.1.3 Informationssicherheitsrisikobehandlung",
     "6.1.2 Informationssicherheitsrisikobeurteilung",

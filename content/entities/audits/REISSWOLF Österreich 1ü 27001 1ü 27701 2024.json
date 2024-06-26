@@ -187,7 +187,16 @@
           ]
         },
         {
+          "reusableContext": "Eröffnungsgespräch mittlerer Tag",
           "context": "10 Verbesserung",
+          "partners": [
+            "Stefan Linges",
+            "Manuel Moser"
+          ],
+          "auditors": [
+            "Harald Montenegro",
+            "Christian Focke-Kiss"
+          ],
           "questions": [
             {
               "questionsItem": "10.1 Nichtkonformität und Korrekturmaßnahmen"

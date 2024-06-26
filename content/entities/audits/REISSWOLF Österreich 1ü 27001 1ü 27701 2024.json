@@ -140,11 +140,14 @@
           "context": "8 Betrieb",
           "questions": [
             {
-              "questionsItem": "8.2 Informationssicherheitsrisikobeurteilung"
+              "questionsReference": "content/entities/standards/ISO-IEC 27001:2013.json"
             },
             {
               "questionsReference": "content/entities/standards/ISO-IEC 27001:2013.json",
               "questionsItem": "8.1 Betriebliche Planung und Steuerung"
+            },
+            {
+              "questionsItem": "8.2 Informationssicherheitsrisikobeurteilung"
             }
           ]
         },

@@ -212,6 +212,7 @@
           ]
         },
         {
+          "context": "A.11 Physische und umgebungsbezogene Sicherheit",
           "questions": [
             {
               "questionsReference": "content/entities/standards/ISO-IEC 27001:2013.json",

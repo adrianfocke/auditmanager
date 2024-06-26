@@ -18,7 +18,8 @@
   "dates": [
     {
       "date": "2024-07-15T22:00:00.000Z",
-      "location": "Reisswolf Straße 1, 2100 Leobendorf"
+      "location": "Reisswolf Straße 1, 2100 Leobendorf",
+      "startTime": "09:00"
     },
     {
       "date": "2024-07-22T22:00:00.000Z",

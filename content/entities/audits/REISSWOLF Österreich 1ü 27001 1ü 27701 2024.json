@@ -203,6 +203,13 @@
           ]
         },
         {
+          "questions": [
+            {
+              "questionsReference": "content/entities/standards/ISO-IEC 27001:2013.json"
+            }
+          ]
+        },
+        {
           "context": "A.7.2 Bedingungen für die Erhebung und Verarbeitung",
           "questions": [
             {

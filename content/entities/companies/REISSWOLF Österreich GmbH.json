@@ -2,11 +2,14 @@
   "scope": "REISSWOLF Österreich GmbH",
   "locations": [
     {
-      "location": "Hangstraße 11, Gewerbegebiet Neubau Süd, 4063 Hörsching"
+      "location": "Gewerbegebiet Gärberbach 4-6, 6020 Innsbruck"
     },
     {
       "location": "Reisswolf Straße 1, 2100 Leobendorf",
       "isPrimaryLocation": true
+    },
+    {
+      "location": "Hangstraße 11, Gewerbegebiet Neubau Süd, 4063 Hörsching"
     }
   ]
 }

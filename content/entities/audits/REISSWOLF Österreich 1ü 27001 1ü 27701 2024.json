@@ -72,6 +72,7 @@
         },
         {
           "context": "5 Führung",
+          "duration": "01:00",
           "questions": [
             {
               "questionsReference": "content/entities/standards/ISO-IEC 27001:2013.json",

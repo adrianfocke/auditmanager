@@ -300,6 +300,13 @@
         },
         {
           "context": "A.11 Physische und umgebungsbezogene Sicherheit",
+          "duration": "01:00",
+          "partners": [
+            "Stefan Linges"
+          ],
+          "auditors": [
+            "Harald Montenegro"
+          ],
           "questions": [
             {
               "questionsReference": "content/entities/standards/ISO-IEC 27001:2013.json",

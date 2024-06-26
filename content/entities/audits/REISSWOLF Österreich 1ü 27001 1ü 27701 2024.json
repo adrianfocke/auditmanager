@@ -92,6 +92,9 @@
           "context": "6 Planung",
           "questions": [
             {
+              "questionsItem": "A.6 Organisation der Informationssicherheit"
+            },
+            {
               "questionsReference": "content/entities/standards/ISO-IEC 27001:2013.json",
               "questionsItem": "6.1 Maßnahmen zum Umgang mit Risiken und Chancen"
             },

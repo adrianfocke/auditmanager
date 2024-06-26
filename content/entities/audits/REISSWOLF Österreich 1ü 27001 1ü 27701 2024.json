@@ -239,6 +239,13 @@
           ]
         },
         {
+          "questions": [
+            {
+              "questionsReference": "content/entities/standards/ISO-IEC 27701:2019.json"
+            }
+          ]
+        },
+        {
           "reusableContext": "Abschlussgespräch mittlerer Tag",
           "duration": "00:15",
           "partners": [

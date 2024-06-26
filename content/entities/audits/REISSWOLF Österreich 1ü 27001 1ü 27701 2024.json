@@ -164,6 +164,14 @@
         },
         {
           "context": "9 Bewertung der Leistung",
+          "partners": [
+            "Stefan Linges",
+            "Manuel Moser"
+          ],
+          "auditors": [
+            "Harald Montenegro",
+            "Christian Focke-Kiss"
+          ],
           "questions": [
             {
               "questionsReference": "content/entities/standards/ISO-IEC 27001:2013.json",

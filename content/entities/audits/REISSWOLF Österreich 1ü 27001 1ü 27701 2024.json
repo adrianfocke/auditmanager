@@ -37,8 +37,7 @@
           "questions": [
             {},
             {
-              "questionsReference": "content/entities/standards/ISO-IEC 27701:2019.json",
-              "questionsItem": "5.2.1 Verstehen der Organisation und ihres Kontextes"
+              "questionsItem": "5.2.2 Verstehen der Erfordernisse und Erwartungen der interessierten Parteien"
             },
             {
               "questionsReference": "content/entities/standards/ISO-IEC 27001:2013.json",
@@ -55,6 +54,10 @@
             {
               "questionsReference": "content/entities/standards/ISO-IEC 27001:2013.json",
               "questionsItem": "4.4 Informationssicherheitsmanagementsystem"
+            },
+            {
+              "questionsReference": "content/entities/standards/ISO-IEC 27701:2019.json",
+              "questionsItem": "5.2.1 Verstehen der Organisation und ihres Kontextes"
             }
           ]
         },

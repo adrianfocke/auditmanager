@@ -1,6 +1,7 @@
 {
   "name": "ISO/IEC 27001:2013",
   "sections": [
+    "8.3 Informationssicherheitsrisikobehandlung",
     "8.2 Informationssicherheitsrisikobeurteilung",
     "8.1 Betriebliche Planung und Steuerung",
     "7.5 Dokumentierte Information",

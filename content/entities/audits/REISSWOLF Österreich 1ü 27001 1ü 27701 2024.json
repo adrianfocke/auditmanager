@@ -275,9 +275,6 @@
       "location": "Gewerbegebiet Gärberbach 4-6, 6020 Innsbruck",
       "sessions": [
         {
-          "reusableContext": "Abschlussgespräch letzter Tag"
-        },
-        {
           "reusableContext": "Eröffnungsgespräch mittlerer Tag",
           "duration": "00:15",
           "partners": [
@@ -304,6 +301,17 @@
               "questionsReference": "content/entities/standards/ISO-IEC 27001:2013.json",
               "questionsItem": "A.12 Betriebssicherheit"
             }
+          ]
+        },
+        {
+          "reusableContext": "Abschlussgespräch letzter Tag",
+          "partners": [
+            "Manuel Moser",
+            "Stefan Linges"
+          ],
+          "auditors": [
+            "Christian Focke-Kiss",
+            "Harald Montenegro"
           ]
         }
       ]

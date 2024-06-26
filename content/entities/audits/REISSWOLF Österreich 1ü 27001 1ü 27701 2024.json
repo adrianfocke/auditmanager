@@ -158,6 +158,9 @@
             {
               "questionsReference": "content/entities/standards/ISO-IEC 27001:2013.json",
               "questionsItem": "9.1 Überwachung, Messung, Analyse und Bewertung"
+            },
+            {
+              "questionsReference": "content/entities/standards/ISO-IEC 27001:2013.json"
             }
           ]
         },

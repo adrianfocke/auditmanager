@@ -22,6 +22,12 @@
       "person": "content/entities/people/HAO.json"
     }
   ],
+  "partners": [
+    {
+      "isRepresentative": true,
+      "person": "content/entities/people/manuel.moser@reisswolf.at.json"
+    }
+  ],
   "level": "2",
   "method": "1. Überwachung"
 }

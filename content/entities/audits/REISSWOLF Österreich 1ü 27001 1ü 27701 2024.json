@@ -24,6 +24,9 @@
   ],
   "partners": [
     {
+      "person": "content/entities/people/stefan.linges@reisswolf.at.json"
+    },
+    {
       "isRepresentative": true,
       "person": "content/entities/people/manuel.moser@reisswolf.at.json"
     }

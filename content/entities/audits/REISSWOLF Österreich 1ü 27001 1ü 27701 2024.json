@@ -22,15 +22,6 @@
       "startTime": "09:00",
       "sessions": [
         {
-          "context": "A.7.5 Weitergabe, Übertragung und Offenlegung von personenbezogenen Daten",
-          "questions": [
-            {
-              "questionsReference": "content/entities/standards/ISO-IEC 27701:2019.json",
-              "questionsItem": "A.7.5 Weitergabe, Übertragung und Offenlegung von personenbezogenen Daten"
-            }
-          ]
-        },
-        {
           "reusableContext": "Eröffnungsgespräch erster Tag",
           "duration": "00:30",
           "partners": [
@@ -253,6 +244,15 @@
             {
               "questionsReference": "content/entities/standards/ISO-IEC 27701:2019.json",
               "questionsItem": "A.7.4 Datenschutz durch Technikgestaltung und datenschutzfreundliche Voreinstellungen"
+            }
+          ]
+        },
+        {
+          "context": "A.7.5 Weitergabe, Übertragung und Offenlegung von personenbezogenen Daten",
+          "questions": [
+            {
+              "questionsReference": "content/entities/standards/ISO-IEC 27701:2019.json",
+              "questionsItem": "A.7.5 Weitergabe, Übertragung und Offenlegung von personenbezogenen Daten"
             }
           ]
         },

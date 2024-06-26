@@ -1,6 +1,7 @@
 {
   "name": "ISO/IEC 27001:2013",
   "sections": [
+    "6.1.3 Informationssicherheitsrisikobehandlung",
     "6.1.2 Informationssicherheitsrisikobeurteilung",
     "6.1.1 Allgemeines",
     "6.1 Maßnahmen zum Umgang mit Risiken und Chancen",

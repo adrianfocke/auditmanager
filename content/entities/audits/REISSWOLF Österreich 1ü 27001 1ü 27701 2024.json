@@ -108,15 +108,18 @@
           "context": "7 Unterstützung",
           "questions": [
             {
+              "questionsItem": "7.4 Kommunikation"
+            },
+            {
               "questionsReference": "content/entities/standards/ISO-IEC 27001:2013.json",
-              "questionsItem": "7.3 Bewusstsein"
+              "questionsItem": "7.1 Ressourcen"
             },
             {
               "questionsItem": "7.2 Kompetenz"
             },
             {
               "questionsReference": "content/entities/standards/ISO-IEC 27001:2013.json",
-              "questionsItem": "7.1 Ressourcen"
+              "questionsItem": "7.3 Bewusstsein"
             }
           ]
         },

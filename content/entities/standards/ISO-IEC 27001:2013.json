@@ -1,6 +1,7 @@
 {
   "name": "ISO/IEC 27001:2013",
   "sections": [
+    "A.8 Verwaltung der Werte",
     "A.7 Personalsicherheit",
     "A.6 Organisation der Informationssicherheit",
     "A.5 Informationssicherheitsrichtlinien",

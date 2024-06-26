@@ -275,6 +275,17 @@
       "location": "Gewerbegebiet Gärberbach 4-6, 6020 Innsbruck",
       "sessions": [
         {
+          "reusableContext": "Eröffnungsgespräch mittlerer Tag",
+          "duration": "00:15",
+          "partners": [
+            "Manuel Moser",
+            "Stefan Linges"
+          ],
+          "auditors": [
+            "Christian Focke-Kiss"
+          ]
+        },
+        {
           "context": "A.11 Physische und umgebungsbezogene Sicherheit",
           "questions": [
             {

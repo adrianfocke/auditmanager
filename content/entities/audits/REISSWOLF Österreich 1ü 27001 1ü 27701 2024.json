@@ -22,14 +22,6 @@
       "startTime": "09:00",
       "sessions": [
         {
-          "questions": [
-            {
-              "questionsReference": "content/entities/standards/ISO-IEC 27701:2019.json",
-              "questionsItem": "A.7.2 Bedingungen für die Erhebung und Verarbeitung"
-            }
-          ]
-        },
-        {
           "reusableContext": "Eröffnungsgespräch erster Tag",
           "duration": "00:30",
           "partners": [
@@ -198,6 +190,14 @@
             {
               "questionsReference": "content/entities/standards/ISO-IEC 27001:2013.json",
               "questionsItem": "A.8 Verwaltung der Werte"
+            }
+          ]
+        },
+        {
+          "questions": [
+            {
+              "questionsReference": "content/entities/standards/ISO-IEC 27701:2019.json",
+              "questionsItem": "A.7.2 Bedingungen für die Erhebung und Verarbeitung"
             }
           ]
         },

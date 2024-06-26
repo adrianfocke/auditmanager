@@ -73,7 +73,8 @@
           "context": "Führung",
           "questions": [
             {
-              "questionsReference": "content/entities/standards/ISO-IEC 27001:2013.json"
+              "questionsReference": "content/entities/standards/ISO-IEC 27001:2013.json",
+              "questionsItem": "5.3 Rollen, Verantwortlichkeiten und Befugnisse in der Organisation"
             },
             {
               "questionsItem": "5.2 Politik"

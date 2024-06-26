@@ -1,6 +1,7 @@
 {
   "name": "ISO/IEC 27001:2013",
   "sections": [
+    "A.12 Betriebssicherheit",
     "A.11 Physische und umgebungsbezogene Sicherheit",
     "A.10 Kryptographie",
     "A.9 Zugangssteuerung",

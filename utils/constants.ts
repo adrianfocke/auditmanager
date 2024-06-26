@@ -2,12 +2,6 @@
 export const PLACEHOLDER_REGEX = /{{field_[a-zA-Z0-9]+(?:_[a-zA-Z0-9]+)*}}/g;
 export const LETTERS_NUMBERS_HYPEN_BLANK_REGEX = /^[a-zA-Z0-9-\s]+$/;
 
-// TODO get rid of this
-export const LOCATIONS = [
-  '1100 Wien, An der Spinnerin 10',
-  '1020 Wien, Lassallestraße 5',
-];
-
 export const TIMES = [
   '06:30',
   '06:45',

@@ -1,5 +1,5 @@
 import type { Collection } from 'tinacms';
-import { DURATIONS, LOCATIONS, TIMES } from '../../utils/constants';
+import { DURATIONS, TIMES } from '../../utils/constants';
 import {
   readableDateFromDatetime,
   readableFileNameFromEntity,
@@ -93,9 +93,11 @@ export default {
         { name: 'date', label: 'Date', type: 'datetime' },
         {
           name: 'location',
-          label: 'Location',
           type: 'string',
-          options: LOCATIONS,
+          label: ' ' /* will be added later, based on picker type */,
+          ui: {
+            component: Picker('Company Location'),
+          },
         },
         {
           name: 'startTime',

@@ -45,6 +45,7 @@ export type PickerType =
   | 'Audit Context'
   | 'Audit Type'
   | 'Audit Type Relation'
+  | 'Company Location'
   | 'Standard Section';
 export interface PickerTypeSettings {
   display: (data: any) => any;

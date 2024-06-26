@@ -2,7 +2,7 @@
   "scope": "REISSWOLF Österreich GmbH",
   "locations": [
     {
-      "location": "Gewerbegebiet Gärberbach 4-6, 6020 Innsbruck"
+      "location": "Framrach 39, 9433 St. Andrä"
     },
     {
       "location": "Reisswolf Straße 1, 2100 Leobendorf",
@@ -10,6 +10,9 @@
     },
     {
       "location": "Hangstraße 11, Gewerbegebiet Neubau Süd, 4063 Hörsching"
+    },
+    {
+      "location": "Gewerbegebiet Gärberbach 4-6, 6020 Innsbruck"
     }
   ]
 }

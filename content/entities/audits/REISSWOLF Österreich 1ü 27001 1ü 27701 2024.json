@@ -35,6 +35,7 @@
         },
         {
           "context": "4 Kontext der Organisation",
+          "duration": "01:00",
           "questions": [
             {
               "questionsReference": "content/entities/standards/ISO-IEC 27001:2013.json",

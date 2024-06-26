@@ -73,7 +73,8 @@
           "context": "Führung",
           "questions": [
             {
-              "questionsReference": "content/entities/standards/ISO-IEC 27001:2013.json"
+              "questionsReference": "content/entities/standards/ISO-IEC 27001:2013.json",
+              "questionsItem": "5.1 Führung und Verpflichtung"
             }
           ]
         },

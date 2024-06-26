@@ -22,6 +22,10 @@
       "startTime": "09:00",
       "sessions": [
         {
+          "context": "Mittagspause",
+          "duration": "01:00"
+        },
+        {
           "reusableContext": "Eröffnungsgespräch erster Tag",
           "duration": "00:30",
           "partners": [

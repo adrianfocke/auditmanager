@@ -477,14 +477,15 @@
           ]
         },
         {
-          "reusableContext": "Abschlussgespräch letzter Tag",
+          "reusableContext": "Eröffnungsgespräch letzter Tag",
           "duration": "00:30",
           "partners": [
             "Manuel Moser",
             "Stefan Linges"
           ],
           "auditors": [
-            "Christian Focke-Kiss"
+            "Christian Focke-Kiss",
+            "Harald Montenegro"
           ]
         }
       ]

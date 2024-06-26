@@ -70,6 +70,14 @@
           ]
         },
         {
+          "context": "Führung",
+          "questions": [
+            {
+              "questionsReference": "content/entities/standards/ISO-IEC 27001:2013.json"
+            }
+          ]
+        },
+        {
           "reusableContext": "Abschlussgespräch mittlerer Tag",
           "duration": "00:15",
           "partners": [

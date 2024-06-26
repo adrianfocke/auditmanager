@@ -19,5 +19,6 @@
       "person": "content/entities/people/FOC.json"
     }
   ],
-  "level": "2"
+  "level": "2",
+  "method": "1. Überwachung"
 }

@@ -9,6 +9,20 @@ export default {
     router: ({ document }) => {
       return `/files/${document._sys.filename}`;
     },
+    filename: {
+      readonly: true,
+      slugify: (values) => {
+        const title = values?.name || 'untitled';
+        // Replace umlauts and other special characters
+        const sanitizedTitle = title
+          .normalize('NFD')
+          .replace(/[\u0300-\u036f]/g, '') // Remove diacritics
+          .replace(/[^a-zA-Z0-9 ]/g, '') // Remove special characters
+          .replace(/ /g, '-')
+          .toLowerCase();
+        return sanitizedTitle;
+      },
+    },
   },
   fields: [
     {

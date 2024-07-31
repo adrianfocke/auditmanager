@@ -136,15 +136,6 @@ export default {
               },
             },
             {
-              name: 'sections',
-              type: 'string',
-              list: true,
-              label: ' ' /* will be added later, based on picker type */,
-              ui: {
-                component: Picker('Audit Type'),
-              },
-            },
-            {
               name: 'duration',
               label: 'Duration',
               type: 'string',

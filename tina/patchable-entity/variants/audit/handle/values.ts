@@ -119,19 +119,7 @@ const auditplan = (entity: FileQuery['file']['entity']) => {
       const timeslot = timeslotAndNextTime.timeslot;
       startTime = timeslotAndNextTime.nextStartTime;
 
-      const sections = session?.sections?.map((section, j) => {
-        if (j === 0) {
-          return section;
-        } else {
-          const previousSection = session.sections![j - 1];
-          return previousSection && section?.startsWith(previousSection)
-            ? section.replace(previousSection, '')
-            : undefined;
-        }
-      });
-      const context = [session?.context ?? session?.reusableContext].concat(
-        sections
-      );
+      const context = [session?.context ?? session?.reusableContext];
 
       const partners = session?.partners?.map((person) => person);
       const auditors = session?.auditors?.map((person) => person);

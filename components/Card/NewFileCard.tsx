@@ -1,4 +1,5 @@
 'use client';
+import client from '@/tina/__generated__/client';
 import { LETTERS_NUMBERS_HYPEN_BLANK_REGEX } from '@/utils/constants';
 import { AccessibleIcon } from '@radix-ui/react-accessible-icon';
 import * as Form from '@radix-ui/react-form';
@@ -17,7 +18,20 @@ export default () => {
       </Flex>
       <Form.Root
         onSubmit={async (event) => {
-          event.stopPropagation();
+          event.preventDefault();
+
+          const newFilename = Object.fromEntries(
+            new FormData(event.currentTarget)
+          ).name as string;
+
+          await client.queries.createFile({
+            relativePath: `/${newFilename}.mdx`,
+            params: {
+              file: {
+                name: newFilename,
+              },
+            },
+          });
         }}
       >
         <Form.Field name='name'>

@@ -24,14 +24,20 @@ export default () => {
             new FormData(event.currentTarget)
           ).name as string;
 
-          await client.queries.createFile({
-            relativePath: `/${newFilename}.mdx`,
-            params: {
-              file: {
-                name: newFilename,
+          try {
+            const newFile = await client.queries.createFile({
+              relativePath: `/${newFilename}.mdx`,
+              params: {
+                file: {
+                  name: newFilename,
+                },
               },
-            },
-          });
+            });
+            console.info('New file: ', newFile);
+          } catch (error) {
+            console.error('New file error: ', error);
+          }
+          
         }}
       >
         <Form.Field name='name'>

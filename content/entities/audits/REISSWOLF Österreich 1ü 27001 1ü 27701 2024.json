@@ -6,12 +6,12 @@
   "standards": [
     {
       "standard": "content/entities/standards/ISO-IEC 27001:2013.json",
-      "isoAuditTypeRelation": "Multi-Site-Audit / Matrix-Audit",
+      "isoAuditTypeRelation": "1. Überwachung",
       "registrationNumber": "TA420223015515"
     },
     {
       "standard": "content/entities/standards/ISO-IEC 27701:2019.json",
-      "isoAuditTypeRelation": "Multi-Site-Audit / Matrix-Audit",
+      "isoAuditTypeRelation": "1. Überwachung",
       "registrationNumber": "TA420223015515"
     }
   ],
@@ -511,5 +511,5 @@
   ],
   "level": "2",
   "duration": 26.5,
-  "method": "1. Überwachung"
+  "method": "Multi-Site-Audit / Matrix-Audit"
 }

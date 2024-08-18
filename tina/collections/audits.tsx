@@ -62,7 +62,7 @@ export default {
           type: 'string',
           label: ' ' /* will be added later, based on picker type */,
           ui: {
-            component: Picker('Audit Type Relation'),
+            component: Picker('Audit Type'),
           },
         },
         {
@@ -345,7 +345,7 @@ export default {
       type: 'string',
       label: ' ' /* will be added later, based on picker type */,
       ui: {
-        component: Picker('Audit Type'),
+        component: Picker('Audit Type Relation'),
       },
     },
   ],

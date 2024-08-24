@@ -1,4 +1,6 @@
 import type { Collection } from 'tinacms';
+import { CHARACTERS_REGEX, CHARACTERS_REGEX_HINT } from '../../utils/constants';
+import { sanitizeFilenameForURL } from '../../utils/sanitize';
 
 export default {
   name: 'file',
@@ -12,15 +14,8 @@ export default {
     filename: {
       readonly: true,
       slugify: (values) => {
-        const title = values?.name || 'untitled';
-        // Replace umlauts and other special characters
-        const sanitizedTitle = title
-          .normalize('NFD')
-          .replace(/[\u0300-\u036f]/g, '') // Remove diacritics
-          .replace(/[^a-zA-Z0-9 ]/g, '') // Remove special characters
-          .replace(/ /g, '-')
-          .toLowerCase();
-        return sanitizedTitle;
+        const filename = values?.name || 'untitled';
+        return sanitizeFilenameForURL(filename);
       },
     },
   },
@@ -30,6 +25,17 @@ export default {
       label: 'Name',
       type: 'string',
       required: true,
+      ui: {
+        validate: (value) => {
+          if (!value) {
+            return 'Value must be defined';
+          }
+
+          if (!CHARACTERS_REGEX.test(value)) {
+            return CHARACTERS_REGEX_HINT;
+          }
+        },
+      },
     },
     {
       name: 'entity',

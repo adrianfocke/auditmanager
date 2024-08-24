@@ -1,5 +1,8 @@
 'use client';
-import { LETTERS_NUMBERS_HYPEN_BLANK_REGEX } from '@/utils/constants';
+import client from '@/tina/__generated__/client';
+import { createFile } from '@/tina/queries';
+import { CHARACTERS_REGEX, CHARACTERS_REGEX_HINT } from '@/utils/constants';
+import { sanitizeFilenameForURL } from '@/utils/sanitize';
 import { AccessibleIcon } from '@radix-ui/react-accessible-icon';
 import * as Form from '@radix-ui/react-form';
 import { FilePlusIcon } from '@radix-ui/react-icons';
@@ -17,7 +20,13 @@ export default () => {
       </Flex>
       <Form.Root
         onSubmit={async (event) => {
-          event.stopPropagation();
+          event.preventDefault();
+
+          const newFilename = Object.fromEntries(
+            new FormData(event.currentTarget)
+          ).name as string;
+
+          createFile(newFilename);
         }}
       >
         <Form.Field name='name'>
@@ -32,13 +41,9 @@ export default () => {
             />
           </Form.Control>
           <Form.Message
-            match={(value) => {
-              return LETTERS_NUMBERS_HYPEN_BLANK_REGEX.test(value)
-                ? false
-                : true;
-            }}
+            match={(value) => (CHARACTERS_REGEX.test(value) ? false : true)}
           >
-            <p className='mb-2'>Letters, numbers, hyphen and blanks only!</p>
+            <p className='mb-2'>{CHARACTERS_REGEX_HINT}</p>
           </Form.Message>
         </Form.Field>
         <Form.Submit asChild>

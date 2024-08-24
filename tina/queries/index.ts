@@ -13,6 +13,6 @@ export const createFile = async (filename: string) => {
     });
     console.info('New file: ', newFile);
   } catch (error) {
-    console.error('New file error: ', error);
+    console.error('New file error: ', error, client);
   }
 };

@@ -121,6 +121,12 @@ const auditplan = (entity: FileQuery['file']['entity']) => {
 
       const context = [session?.context ?? session?.reusableContext];
 
+      if (session?.questions?.length! > 1) {
+        const questions = session?.questions
+          ?.map((item) => item?.questionsItem)
+          .forEach((item) => context.push('* ' + item));
+      }
+
       const partners = session?.partners?.map((person) => person);
       const auditors = session?.auditors?.map((person) => person);
 
